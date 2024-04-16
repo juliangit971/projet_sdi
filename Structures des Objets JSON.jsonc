@@ -1,0 +1,64 @@
+// ### Structure Utilisateur ###
+
+{
+    "481645765489465464" : {
+        "nickname" : "John Doe",
+        "email" : "test@mail.com",
+        "password" : "HASH",
+        "profile_picture" : "<Path>",
+        "grade" : "User", // Admin, Moderator, etc
+        "followed_user" : [
+            "user2",
+            "user3"
+        ],
+        "liked_posts" : [
+            "post1",
+            "post2"
+        ],
+        "saved_posts" : [
+            "post1",
+            "post2"
+        ],
+        "created_posts" : [
+            "post3",
+            "post4"
+        ]
+    }
+}
+
+
+// ### Structure Recette ###
+
+{
+    "481645765489465464" : {
+        "name" : "Chocolate Cake",
+        "presentation_image" : "<Path>",
+        "timestamp" : "date",
+        "description" : "Description (Optional)",
+        "ingredients" : "- Chocolate\n- Florr\n- Etc...",
+        "sections" : [
+            {
+                "step_recipe" : "1. Add Chocolate",
+                "step_image" : "<Path1>"
+            },
+            {
+                "step_recipe" : "2. Add Floor",
+                "step_image" : "<Path2>"
+            }
+        ],
+        "tags" : [
+            "Sugary",
+            "Salty",
+            "etc..."
+        ],
+        "liked_by" : [
+            "user1",
+            "user2"
+        ],
+        "saved_by" : [
+            "user1",
+            "user2"
+        ]
+    }
+}
+
