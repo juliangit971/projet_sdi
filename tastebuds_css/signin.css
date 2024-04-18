@@ -1,0 +1,114 @@
+body{
+    background:linear-gradient(to right,#F3BE85,#FFEAD2) ;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.right_side {
+    background-color: white;
+    height: 720px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+
+h1{
+    font-family: 'Poppins',sans-serif;
+    margin-left: 50px;
+    margin-top: 90px;
+    font-size: 45px;
+}
+
+.interactive_button {
+    display: flex;
+    flex-direction: column;   
+}
+
+label[for="email"],label[for="password"],label[for="pseudo"] {
+    margin-left: 90px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+}
+
+input[type="email"],input[type="password"],input[type="pseudo"] {
+    width: 420px;
+    padding: 15px;
+    border: 1px solid #000000;
+    border-radius: 12px;
+    font-size: 16px;
+    margin: auto;
+}
+
+.opt {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 180px;
+    margin-top: -10px;
+}
+
+a {
+    color: black;
+    text-decoration: none; 
+}
+
+.sign-btn {
+    margin-left:180px;
+    margin-top: 45px;
+    margin-bottom: 0px;
+    background-color: #F3BE85;
+    border-radius: 30px;
+    border: 0px;
+    width: 230px;
+    height: 55px;
+    text-align: center;
+    color: white;
+}
+
+.sign-btn:hover{
+    transform: scale(1.05);
+}
+
+button[type="submit"]{
+    font-size: 24px;
+}
+
+.left_side {
+    background-color: white;
+    height: 720px;
+    width: 600px;;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width:500px;
+    height:250px;
+    margin-top: 10vh;
+}
+
+h2{
+    font-family: 'Rochester';
+    font-size:32px;
+    padding:10px;
+    margin:0;
+}
+
