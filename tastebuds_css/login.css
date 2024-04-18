@@ -73,8 +73,7 @@ a[href="signin.html"]{
 
 a[href="accueil.html"]{
     font-size: 22px;
-    font-weight: bold;
-    margin-left: 152px;
+    margin-left: 160px;
 }
 
 .login-btn {
@@ -88,7 +87,7 @@ a[href="accueil.html"]{
     height: 55px;
     text-align: center;
     color: white;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 .login-btn:hover{

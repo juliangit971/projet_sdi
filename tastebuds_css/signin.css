@@ -70,8 +70,7 @@ a {
 
 a[href="accueil.html"]{
     font-size: 22px;
-    font-weight: bold;
-    margin-left: 155px;
+    margin-left: 160px;
 }
 
 .sign-btn {
@@ -85,6 +84,7 @@ a[href="accueil.html"]{
     height: 55px;
     text-align: center;
     color: white;
+    font-weight: bolder;
 }
 
 .sign-btn:hover{
