@@ -15,11 +15,11 @@ body{
     align-items: center;
 }
 
-.left_side {
+.right_side {
     background-color: white;
     height: 720px;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
     display: flex;
     flex-direction: column;
     width: 600px;
@@ -37,7 +37,7 @@ h1{
     flex-direction: column;   
 }
 
-label[for="email"],label[for="password"] {
+label[for="email"],label[for="password"],label[for="pseudo"] {
     margin-left: 90px;
     margin-top: 30px;
     margin-bottom: 10px;
@@ -45,7 +45,7 @@ label[for="email"],label[for="password"] {
     font-size: 24px;
 }
 
-input[type="email"],input[type="password"] {
+input[type="email"],input[type="password"],input[type="pseudo"] {
     width: 420px;
     padding: 15px;
     border: 1px solid #000000;
@@ -55,10 +55,10 @@ input[type="email"],input[type="password"] {
 }
 
 .opt {
-    font-size: 1em;
+    font-size: 18px;
     font-family: 'Roboto', sans-serif;
-    margin-left: 115px;
-    margin-top: 10px;
+    margin-left: 180px;
+    margin-top: -10px;
 }
 
 a {
@@ -66,14 +66,10 @@ a {
     text-decoration: none; 
 }
 
-a[href="signin.html"]{
-    margin-left: 225px;
-}
-
-.login-btn {
+.sign-btn {
     margin-left:180px;
-    margin-top: 35px;
-    margin-bottom: 10px;
+    margin-top: 45px;
+    margin-bottom: 0px;
     background-color: #F3BE85;
     border-radius: 30px;
     border: 0px;
@@ -83,7 +79,7 @@ a[href="signin.html"]{
     color: white;
 }
 
-.login-btn:hover{
+.sign-btn:hover{
     transform: scale(1.05);
 }
 
@@ -91,12 +87,12 @@ button[type="submit"]{
     font-size: 24px;
 }
 
-.right_side {
+.left_side {
     background-color: white;
     height: 720px;
     width: 600px;;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
