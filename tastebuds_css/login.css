@@ -52,6 +52,7 @@ input[type="email"],input[type="password"] {
     border-radius: 12px;
     font-size: 16px;
     margin: auto;
+    font-weight: bold;
 }
 
 .opt {
@@ -67,12 +68,18 @@ a {
 }
 
 a[href="signin.html"]{
-    margin-left: 225px;
+    margin-left: 190px;
+}
+
+a[href="accueil.html"]{
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 152px;
 }
 
 .login-btn {
     margin-left:180px;
-    margin-top: 35px;
+    margin-top: 40px;
     margin-bottom: 10px;
     background-color: #F3BE85;
     border-radius: 30px;
@@ -81,6 +88,7 @@ a[href="signin.html"]{
     height: 55px;
     text-align: center;
     color: white;
+    font-weight: bold;
 }
 
 .login-btn:hover{
@@ -92,7 +100,8 @@ button[type="submit"]{
 }
 
 .right_side {
-    background-color: white;
+    background-image: url("../tastebuds_html/fond_connexion.jpg");
+    background-size: cover;
     height: 720px;
     width: 600px;;
     border-top-right-radius: 30px;
@@ -110,9 +119,10 @@ img{
 }
 
 h2{
-    font-family: 'Rochester';
+    font-family: 'Sahitya';
     font-size:32px;
     padding:10px;
     margin:0;
+    font-weight: 100;
 }
 

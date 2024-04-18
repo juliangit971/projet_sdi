@@ -30,6 +30,7 @@ h1{
     margin-left: 50px;
     margin-top: 90px;
     font-size: 45px;
+    margin-bottom: 0px;
 }
 
 .interactive_button {
@@ -52,6 +53,7 @@ input[type="email"],input[type="password"],input[type="pseudo"] {
     border-radius: 12px;
     font-size: 16px;
     margin: auto;
+    font-weight: bold;
 }
 
 .opt {
@@ -66,10 +68,16 @@ a {
     text-decoration: none; 
 }
 
+a[href="accueil.html"]{
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 155px;
+}
+
 .sign-btn {
     margin-left:180px;
-    margin-top: 45px;
-    margin-bottom: 0px;
+    margin-top: 35px;
+    margin-bottom: 5px;
     background-color: #F3BE85;
     border-radius: 30px;
     border: 0px;
@@ -88,7 +96,8 @@ button[type="submit"]{
 }
 
 .left_side {
-    background-color: white;
+    background-image: url("../tastebuds_html/fond_connexion.jpg");
+    background-size: cover;
     height: 720px;
     width: 600px;;
     border-top-left-radius: 30px;
@@ -106,9 +115,10 @@ img{
 }
 
 h2{
-    font-family: 'Rochester';
+    font-family: 'Sahitya';
     font-size:32px;
     padding:10px;
     margin:0;
+    font-weight: 100;
 }
 
