@@ -4,7 +4,7 @@
 <head>
         <meta charset="utf-8">
         <title> Taste Buds </title>
-        <link href="*" rel="stylesheet">
+        <link href="header.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -19,7 +19,22 @@
 
 <header>
 
+    
+    <a href ="*"><img  class="logo" src="images/TasteBuds.png"></a>
+    
+    <div class="search_bar">
+
+        <input type="search" placeholder="Rechercher une recette, un ingrédient...">
+        <button type="submit" class="search_button"> <img src ="images/search_button.png"></button>
+
+    </div>
+    
+    <img class="menu" src="images/info.png"></div>
+    <img class="profile" src ="images/profile.png"></div>
+    
+    
 </header>
+      
  
 
 <main>
@@ -35,24 +50,31 @@
 
         <div class="option">
 
-            <input  id="category" name="category" placeholder ="Saisissez une catégorie" required>
-            <img id="choose" src="fleche.png">
+            <input type="category" id="category" name="category" placeholder ="Saisissez une catégorie" required>
+            <img id="choose" src="images/fleche.png">
 
         </div>  
         <div class="option">
 
-            <input  id="difficulty" name="difficulty" placeholder ="Saisissez une difficulté" required>
-            <img id="choose" src="fleche.png">
+            <input type="difficulty" id="difficulty" name="difficulty" placeholder ="Saisissez une difficulté" required>
+            <img id="choose" src="images/fleche.png">
         </div> 
 
         <div class="option">
             <label for="description">DESCRIPTION (OPTIONNEL):<br></label>
-            <input  id="description" name="description" placeholder ="Parlez nous de votre recette !" required>
+            <input type="description" id="description" name="description" placeholder ="Parlez nous de votre recette !" required>
 
         </div> 
 
+        <h3> IMAGE DE PRÉSENTATION: </h3>
+        
+        <img id="image_affichee" src="images/camera-outline.png" alt="Image affichée">
+        <br>
+        <input type="file" id="ajout_photo" name="image" accept="image/png, image/jpeg">
+
+
+
         <div class="interractive_button">
-            
             
             <a href="creation_recette2.html"> <button>  Étape suivante </button></a>
 

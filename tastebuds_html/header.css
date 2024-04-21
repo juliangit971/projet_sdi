@@ -1,0 +1,42 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    background-color: #eee;
+    padding: 20px;
+    
+  }
+  
+ 
+  
+  .search_bar {
+    position: relative;
+  }
+  
+  .search_bar input[type="search"] {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    width: 250px;
+  }
+  
+  .search_button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .profile, .menu {
+    padding: 0 15px;
+    font-size: 24px;
+    cursor: pointer;
+  }
