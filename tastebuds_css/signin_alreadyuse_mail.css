@@ -119,7 +119,7 @@ button[type="submit"]{
 }
 
 .left_side {
-    background-image: url("../tastebuds_html/fond_connexion.jpg");
+    background-image: url("../tastebuds_html/images/fond_connexion.jpg");
     background-size: cover;
     height: 720px;
     width: 600px;;
