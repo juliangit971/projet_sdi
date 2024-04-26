@@ -1,0 +1,132 @@
+body{
+    background-color: #F9F2E1;
+    font-family: 'Roboto' sans-serif;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Create{
+    width: 800px;
+    height: 100vh;
+    background-color: white;
+    border:none;
+}
+
+h1,h2{
+    margin-left:15px;
+    color: #ECB77F;  
+}
+
+h1{
+    font-size: 46px;
+}
+
+h2{
+    
+    font-size: 34px;
+}
+
+label{
+    margin-left:15px;
+    font-weight:bold;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 60px;
+}
+
+img[id="choose"]{
+    position: absolute;
+}
+
+input[type="name"]{
+    margin-left:15px;
+    margin-bottom: 30px;
+    margin-top: 5px;
+    width: 400px;
+    color: black;
+    font-size: 16px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+input[type="name"]:focus{
+    outline: none; 
+}
+
+input[type="description"]{
+    width: 555px;
+    height: 200px;
+    margin-left:15px;
+    margin-bottom: 40px;
+    margin-top: 5px;
+    border: black solid 1px;
+    border-radius: 15px;
+    color: black;
+    font-size: 16px;
+    text-align: start;
+}
+
+textarea{
+    width: 555px;
+    height: 200px;
+    margin-left: 15px;
+    margin-bottom: 40px;
+    padding: 10px;
+    color: black;
+    font-size: 16px;
+    border: black solid 1px;
+    border-radius: 15px;
+    font-family: sans-serif;
+}
+
+::placeholder{
+    color: black;
+    text-align: start;
+    font-family: 'Roboto' sans-serif;
+}
+
+.interractive_button{
+    background-color: white;
+    width: 800px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+input[type="file"]{
+    display: none;
+}
+
+label img{
+    cursor: pointer;
+    padding: 10px;
+    background-color: #F9F2E1;
+    border-radius: 15px;
+    border: black dashed 1px;
+}
+
+button[type="next"]{
+    margin-left: -55px;
+    margin-bottom:45px ;
+    background-color: #F3BE85;
+    border-radius: 30px;
+    border: 0px;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+

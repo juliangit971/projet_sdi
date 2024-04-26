@@ -112,8 +112,7 @@ button[type="submit"]{
 }
 
 img{
-    width:500px;
-    height:250px;
+    scale: 0.6;
     margin-top: 10vh;
 }
 
