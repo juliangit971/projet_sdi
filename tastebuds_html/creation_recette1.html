@@ -50,19 +50,23 @@
         <label for="Name">NOM DE LA RECETTE: <br></label>
         <input type="name" id="name" name="name" placeholder ="Saisissez un nom" required>
 
+
         <div class="option">
 
-            <input type="category" id="category" name="category" placeholder ="Saisissez une catégorie" required>
-            <img id="choose" src="images/fleche.png">
+            <select name="category" id="category">
+            <option value="" hidden> Saisissez une catégorie </option>
+            </select>
 
-        </div>  
+        </div>
         
         <div class="option">
 
-            <input type="difficulty" id="difficulty" name="difficulty" placeholder ="Saisissez une difficulté" required>
-            <img id="choose" src="images/fleche.png">
+            <select name="difficulty" id="difficulty">
+            <option value="" hidden>Saisissez une difficulté </option>
+            
+            </select>
 
-        </div> 
+        </div>
 
         <div class="option">
 
@@ -71,8 +75,8 @@
 
         </div> 
 
+
         <label for="image"> IMAGE DE PRÉSENTATION:<br></label>
-        
         <label for="image_button">
         <img src="images/camera-outline.png" alt="Image affichée">
         <input type="file" id="image_button" accept="image/png, image/jpeg">
