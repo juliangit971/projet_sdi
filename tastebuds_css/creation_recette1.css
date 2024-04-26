@@ -11,7 +11,7 @@ main{
 
 .Create{
     width: 800px;
-    height: 100vh;
+    height: 100%;
     background-color: white;
     border:none;
 }
@@ -89,6 +89,7 @@ input[type="description"]{
 textarea{
     width: 555px;
     height: 200px;
+    margin-top: 5px;
     margin-left: 15px;
     margin-bottom: 40px;
     padding: 10px;
@@ -97,6 +98,7 @@ textarea{
     border: black solid 1px;
     border-radius: 15px;
     font-family: sans-serif;
+    resize:none;
 }
 
 ::placeholder{
@@ -106,7 +108,6 @@ textarea{
 }
 
 .interractive_button{
-    background-color: white;
     width: 800px;
     height: 40px;
     display: flex;
@@ -147,6 +148,7 @@ button[type="next"]{
 .lien_accueil{
     margin-top: 50px;
     margin-left: 60px;
+    background-color: white;
 }
 
 a[href="accueil.html"]{
