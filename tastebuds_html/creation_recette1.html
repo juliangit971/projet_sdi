@@ -28,12 +28,12 @@
         <input type="search" placeholder="Rechercher une recette, un ingrédient...">
         <button class="search"></button>
         
-
     </div>
     
     <div class="right_side">
     <img class="menu" src="images/info.png">
     <img class="profile" src ="images/profile.png">
+
     </div>
     
 </header>
@@ -43,18 +43,19 @@
 <main>
 
     <div class="Create">
+
         <h1>CRÉER UNE RECETTE</h1>
         <h2>INFORMATIONS DE LA RECETTE</h2>
         <br>
-        
-        <label for="Name">NOM DE LA RECETTE: <br></label>
+
+        <label for="name">NOM DE LA RECETTE: <br> </label>
         <input type="name" id="name" name="name" placeholder ="Saisissez un nom" required>
 
 
         <div class="option">
 
             <select name="category" id="category">
-                <option value="" hidden> Saisissez une catégorie </option>
+                <option value="" hidden required> Saisissez une catégorie </option>
             </select>
 
         </div>
@@ -62,23 +63,26 @@
         <div class="option">
 
             <select name="difficulty" id="difficulty">
-                <option value="" hidden>Saisissez une difficulté </option>
+                <option value="" hidden required>Saisissez une difficulté </option>
             </select>
 
         </div>
 
         <div class="option">
 
-            <label for="description">DESCRIPTION (OPTIONNEL):<br></label>
+            <h3 for="description">DESCRIPTION (OPTIONNEL):<br></h3>
             <textarea rows="8" cols="75" placeholder=" Parlez-nous de la recette !"></textarea>
 
         </div> 
 
 
-        <label for="image"> IMAGE DE PRÉSENTATION:<br></label>
+        <h3>IMAGE DE PRÉSENTATION:<br></h3>
+
         <label for="image_button">
-        <img src="images/camera-outline.png" alt="Image affichée">
-        <input type="file" id="image_button" accept="image/png, image/jpeg">
+
+            <img src="images/camera-outline.png" alt="Image affichée">
+            <input type="file" id="image_button" accept="image/png, image/jpeg">
+
         </label>
 
         

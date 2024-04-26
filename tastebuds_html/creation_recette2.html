@@ -46,9 +46,11 @@
         <div class="option">
 
             <input  id="ingredient" name="ingredient" placeholder ="Saisissez un ingrédient" required>
+
             <br>
+
             <input  id="quantity" name="quantity" placeholder ="Saisissez une quantité" required>
-            <img id="choose" src="images/fleche.png">
+
             <input  id="unit" name="unit" placeholder ="Saisissez une unité" required>
             
 
@@ -56,17 +58,24 @@
 
         <button type="submit">  Ajouter un ingrédient</button> 
 
+
+
         <div class="option">
 
-            <input  id="step" name="step" placeholder ="Étape de la recette..." required>
+            <textarea  id="step" name="step" placeholder ="Étape de la recette..." required></textarea>
 
-            <img id="image_affichee" src="images/camera-outline.png" alt="Image affichée">
-            <br>
-            <input type="file" id="ajout_photo" name="image" accept="image/png, image/jpeg">
+            <label for="image_button">
+            
+                <img src="images/camera-outline.png" alt="Image affichée">
+                <input type="file" id="image_button" accept="image/png, image/jpeg">
+    
+            </label>
 
         </div> 
 
         <button type="submit">  Ajouter une étape de préparation </button> 
+
+
 
 
         <div class="interractive_button">
@@ -80,8 +89,7 @@
         <div class="option">
 
             <a href="*">Retour à l'acceuil</a>
-            <p id="pop_up"> Souhaitez-vous conserver le brouillon ?</p>
-
+            
         </div>
 
     </div>
