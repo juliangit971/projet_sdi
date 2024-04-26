@@ -35,20 +35,27 @@ label{
     font-weight:bold;
 }
 
-a{
-    color: black;
-    text-decoration: none;
-    font-weight: 600;
-    margin-left: 60px;
-}
-
 img[id="choose"]{
     position: absolute;
 }
 
+.option{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+select{
+    width: 325px;
+    padding:10px;
+    margin-top: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
 input[type="name"]{
     margin-left:15px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     margin-top: 5px;
     width: 400px;
     color: black;
@@ -60,6 +67,10 @@ input[type="name"]{
 
 input[type="name"]:focus{
     outline: none; 
+}
+
+label[for="description"]{
+    margin-top: 30px;
 }
 
 input[type="description"]{
@@ -108,16 +119,19 @@ input[type="file"]{
 }
 
 label img{
+    scale: 1.2;
     cursor: pointer;
     padding: 10px;
     background-color: #F9F2E1;
     border-radius: 15px;
     border: black dashed 1px;
+    margin-top: 15px;
+    margin-left: 15px;
 }
 
 button[type="next"]{
-    margin-left: -55px;
     margin-bottom:45px ;
+    margin-top: 30px;
     background-color: #F3BE85;
     border-radius: 30px;
     border: 0px;
@@ -129,4 +143,17 @@ button[type="next"]{
     font-weight: bold;
     cursor: pointer;
 }
+
+.lien_accueil{
+    margin-top: 50px;
+    margin-left: 60px;
+}
+
+a[href="accueil.html"]{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
 
