@@ -32,12 +32,10 @@ h2{
 
 
 h3{
+    font-size: 18px;
     margin-left:15px;
+    padding: 0px;
     font-weight:bold;
-}
-
-img[id="choose"]{
-    position: absolute;
 }
 
 .option{
@@ -49,6 +47,7 @@ img[id="choose"]{
 select{
     width: 325px;
     padding:10px;
+    margin-left: 15px;
     margin-top: 15px;
     border-radius: 10px;
     font-size: 16px;
@@ -57,7 +56,6 @@ select{
 input[type="name"]{
     margin-left:15px;
     margin-bottom: 15px;
-    margin-top: 5px;
     width: 400px;
     color: black;
     font-size: 16px;
@@ -74,25 +72,11 @@ h3[for="description"]{
     margin-top: 30px;
 }
 
-input[type="description"]{
-    width: 555px;
-    height: 200px;
-    margin-left:15px;
-    margin-bottom: 40px;
-    margin-top: 5px;
-    border: black solid 1px;
-    border-radius: 15px;
-    color: black;
-    font-size: 16px;
-    text-align: start;
-}
-
 textarea{
     width: 555px;
     height: 200px;
-    margin-top: 5px;
     margin-left: 15px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     padding: 10px;
     color: black;
     font-size: 16px;
@@ -121,14 +105,14 @@ input[type="file"]{
 }
 
 label img{
-    scale: 1.2;
+    scale: 1.5;
     cursor: pointer;
     padding: 10px;
     background-color: #F9F2E1;
     border-radius: 15px;
     border: black dashed 1px;
-    margin-top: 15px;
-    margin-left: 15px;
+    margin-left: 35px;
+    margin-top: 10px;
 }
 
 button[type="next"]{

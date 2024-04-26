@@ -48,9 +48,10 @@
         <h2>INFORMATIONS DE LA RECETTE</h2>
         <br>
 
-        <label for="name">NOM DE LA RECETTE: <br> </label>
-        <input type="name" id="name" name="name" placeholder ="Saisissez un nom" required>
-
+        <div class="option">
+            <h3>NOM DE LA RECETTE: </h3>
+            <input type="name" id="name" name="name" placeholder ="Saisissez un nom" required>
+        </div>
 
         <div class="option">
 
@@ -70,21 +71,21 @@
 
         <div class="option">
 
-            <h3 for="description">DESCRIPTION (OPTIONNEL):<br></h3>
+            <h3 for="description">DESCRIPTION (OPTIONNEL):</h3>
             <textarea rows="8" cols="75" placeholder=" Parlez-nous de la recette !"></textarea>
 
         </div> 
 
+        <div class="option">
+            <h3>IMAGE DE PRÉSENTATION:</h3>
 
-        <h3>IMAGE DE PRÉSENTATION:<br></h3>
+            <label for="image_button">
 
-        <label for="image_button">
+                <img src="images/camera-outline.png" alt="Image affichée">
+                <input type="file" id="image_button" accept="image/png, image/jpeg">
 
-            <img src="images/camera-outline.png" alt="Image affichée">
-            <input type="file" id="image_button" accept="image/png, image/jpeg">
-
-        </label>
-
+            </label>
+        </div>
         
         <div class="interractive_button">
             
