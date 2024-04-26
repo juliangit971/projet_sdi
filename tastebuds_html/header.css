@@ -49,14 +49,15 @@ body {
     align-items: center;
   }
   
-  .menu { 
+  .menu{ 
     cursor: pointer;
     width: 20px;
     height: 12px;
-    margin-right: 5px;
+    scale:0.8;
   }
 
   .profile{
+    scale:0.9;
     cursor: pointer;
     margin-right: 20px;
   }
