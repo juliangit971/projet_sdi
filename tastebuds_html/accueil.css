@@ -29,18 +29,8 @@
     align-items: center;
 }
 
-.logo 
-{
-    width: 400px;
-}
-.search
-{
-    flex: 1;
-}
-.disconnect
-{
-    width :200px;
-}
+
+
 input.main_search_bar
 {
     

@@ -1,65 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main_style.css">
-  </head>
+<html lang="fr">
+<head>
+                    
+    <meta charset="utf-8">
+    <title> Taste Buds </title>
+    <link href="header.css" rel="stylesheet">
+    <link href="accueil.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rochester&display=swap" rel="stylesheet">
+        
 
-  <body>
-    <div class="header">
-       <div class="logo">
-        <img src="logo_TasteBuds.png" alt="Description of the image"width="140" height="80">
-       </div>
-       <div class="search">
-        <input class="main_search_bar" type ="text" placeholder="Search">
-        <button> ffff</button>
-       </div>
-       <div class="disconnect">
-         disconnect
-       </div>
+
+</head>
+
+
+
+<body>
+
+<header>
+    
+        
+    <a href ="accueil.html"><img  class="logo" src="images/TasteBuds.png"></a>
+          
+    <div class="search_bar">
+      
+        <input type="search" placeholder="Rechercher une recette, un ingrédient...">
+        <button class="search"></button>
+              
     </div>
+          
+    <div class="right_side">
+
+        <img class="menu" src="images/info.png">
+        <img class="profile" src ="images/profile.png">
+      
+    </div>
+          
+</header>
+  
     <div class="filters_section">
-      <div class ="filter">
-        <input class="f_checkbox" type ="checkbox" >
-        all
-      </div>
-      <div class ="filter">
-        <input class="f_checkbox" type ="checkbox" >
-        plat principal
-      </div>
-      <div class ="filter">
-        <input class="f_checkbox" type ="checkbox" >
-        entrée
-      </div>
-      <div class ="filter">
-        <input class="f_checkbox" type ="checkbox" >
-        dessert
-      </div>
-    </div>
-    <div class="scrolable">
-      <div  class ="aperçue_recette" >
-        <div class="image_recette">
-          <img src="crepe.webp" alt="Description of the image"width="600">
-        </div>
-        <div class="title_section" >
-          <div class="paragraphe">
-              <div class ="recipe_title">
-                crepe
-              </div>
-              <div class="like">
-                <img src="images.png" alt="Description of the image"width="25">
-                 20 personne ont liker
-              </div>
 
-          </div>
-          <div class="share">
-            <img src="saved_widget_false.png" alt="Description of the image"width="25">
-          </div>
+        <div class ="filter">
+            <input class="f_checkbox" type ="checkbox" >
+            all
         </div>
-      </div>
+
+        <div class ="filter">
+            <input class="f_checkbox" type ="checkbox" >
+            plat principal
+        </div>
+
+        <div class ="filter">
+            <input class="f_checkbox" type ="checkbox" >
+            entrée
+        </div>
+
+        <div class ="filter">
+            <input class="f_checkbox" type ="checkbox" >
+            dessert
+        </div>
     </div>
-  </body>
+
+
+
+    <div class="scrolable">
+        <div  class ="aperçue_recette" >
+
+            <div class="image_recette">
+
+                <img src="aperçu menu/crepe.webp">
+
+            </div>
+
+            <div class="title_section" >
+
+                <div class="paragraphe">
+
+                    <div class ="recipe_title">
+
+                        <p id="name_recette">Nom de la recette</p>
+
+                    </div>
+                
+                    <div class="like">
+
+                        <img src="images/like.png" alt="Description of the image">
+                        <p id="number_like">Nombre de like</p>
+
+                    </div>
+
+                </div>
+                
+                <div class="share">
+
+                    <img src="images/enregister.png" alt="Description of the image"width="25">
+
+                </div>
+
+            </div>
+
+        </div>
+        
+    </div>
+    
+</body>
 
 
 </html>
