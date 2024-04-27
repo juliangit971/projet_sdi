@@ -5,6 +5,7 @@
         <meta charset="utf-8">
         <title> Taste Buds </title>
         <link href="header.css" rel="stylesheet">
+        <link href="../tastebuds_css/creation_recette.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -24,12 +25,15 @@
     <div class="search_bar">
 
         <input type="search" placeholder="Rechercher une recette, un ingrédient...">
-        <button type="submit" class="search_button"> <img src ="images/search_button.png"></button>
-
+        <button class="search"></button>
+        
     </div>
     
-    <img class="menu" src="images/info.png"></div>
-    <img class="profile" src ="images/profile.png"></div>
+    <div class="right_side">
+    <img class="menu" src="images/info.png">
+    <img class="profile" src ="images/profile.png">
+
+    </div>
     
 </header>
  
@@ -38,33 +42,31 @@
 
     <div class="Create">
         <h1>CRÉER UNE RECETTE</h1>
-        <br>
         <h2>INGRÉDIENTS ET ÉTAPES</h2>
-        <br>
         
-
-        <div class="option">
+        <div class="option_ingredient">
 
             <input  id="ingredient" name="ingredient" placeholder ="Saisissez un ingrédient" required>
 
             <br>
 
-            <input  id="quantity" name="quantity" placeholder ="Saisissez une quantité" required>
+            <div class="second_line">
+                <input  id="quantity" name="quantity" placeholder ="Saisissez une quantité" required>
 
-            <input  id="unit" name="unit" placeholder ="Saisissez une unité" required>
-            
+                <input  id="unit" name="unit" placeholder ="Saisissez une unité" required>
+            </div>
 
         </div>  
 
-        <button type="submit">  Ajouter un ingrédient</button> 
+        <button class="submit" type="submit_ingredient">  Ajouter un ingrédient</button> 
 
 
 
-        <div class="option">
+        <div class="option_step">
 
             <textarea  id="step" name="step" placeholder ="Étape de la recette..." required></textarea>
 
-            <label for="image_button">
+            <label for="image_button2">
             
                 <img src="images/camera-outline.png" alt="Image affichée">
                 <input type="file" id="image_button" accept="image/png, image/jpeg">
@@ -73,22 +75,22 @@
 
         </div> 
 
-        <button type="submit">  Ajouter une étape de préparation </button> 
+        <button class="submit" type="submit_step">  Ajouter une étape de préparation </button> 
 
 
 
 
-        <div class="interractive_button">
+        <div class="interractive_button2">
             
-            <a href="creation_recette1.html"> <button > Étape précédente</button> </a>
+            <a href="creation_recette1.html"> <button type="previous"> Étape précédente</button> </a>
             
-            <a href="creation_recette3.html"> <button > Étape suivante </button> </a>
+            <a href="creation_recette3.html"> <button type="next"> Étape suivante </button> </a>
 
         </div> 
 
-        <div class="option">
+        <div class="lien_accueil">
 
-            <a href="*">Retour à l'acceuil</a>
+            <a href="accueil.html">Retour à l'acceuil</a>
             
         </div>
 
