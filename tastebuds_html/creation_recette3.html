@@ -28,8 +28,14 @@
 
     </div>
     
-    <img class="menu" src="images/info.png"></div>
-    <img class="profile" src ="images/profile.png"></div>
+    
+    <label for="menu"><img  src="images/info.png"></label> 
+    
+    <select name="menu" id="menu">
+        <option value="" hidden required>  </option>
+    </select>
+
+    <img  class="profile" src ="images/profile.png" href="parameter.html"> </div>
     
 
 </header>
@@ -38,36 +44,45 @@
 <main>
 
     <div class="Create">
+
         <h1>CRÉER UNE RECETTE</h1>
         <br>
         <h2>FINALISER LA RECETTE</h2>
        
         
 
-        <div class="option">
+        <div class="option_time_prepa">
 
-            <input  id="time_prepa" name="time" placeholder ="Saisissez un temps de préparation" required>
-            <img id="choose" src="images/fleche.png">
+            <select name="time_prepa" id="time_prepa">
+                <option value="" hidden required>Saisissez un temps de préparation</option>
+            </select>
 
         </div>  
-        <div class="option">
 
-            <input  id="type" name="type" placeholder ="Saisissez un type de cuisson" required>
-            <img id="choose" src="images/fleche.png">
+        <div class="option_type">
+
+            <select name="type" id="type">
+                <option value="" hidden required>Saisissez un type de cuisson</option>
+            </select>
+
 
         </div>
 
-        <div class="option">
+        <div class="option_time_cooking">
 
-            <input  id="time_cooking" name="time_cooking" placeholder ="Saisissez un temps de cuisson" required>
-            <img id="choose" src="images/fleche.png">
+            <select name="time_cooking" id="time_cooking">
+                <option value="" hidden required>Saisissez un temps de cuisson</option>
+            </select>
+
 
         </div>      
 
-        <div class="option">
+        <div class="option_time_rest">
 
-            <input  id="time_rest" name="time_rest" placeholder ="Saisissez un temps de repos" required>
-            <img id="choose" src="images/fleche.png">
+            <select name="time_rest" id="time_rest">
+                <option value="" hidden required>Saisissez un temps de repos</option>
+            </select>
+
 
         </div>  
         
