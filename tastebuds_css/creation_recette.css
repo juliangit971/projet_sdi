@@ -45,7 +45,7 @@ h3{
     margin-left: 15px;
 }
 
-select{
+select[id="difficulty"],[id="category"]{
     width: 325px;
     padding:10px;
     margin-left: 15px;
@@ -235,10 +235,11 @@ button[type="submit_ingredient"]{
 
 button[type="submit_step"]{
     width: 340px;
+    margin-bottom: 30px;
 }
 
 .interractive_button2{
-    margin-top: 70px;
+    margin-top: 40px;
     width: 800px;
     height: 100px;
     display: flex;
@@ -247,6 +248,47 @@ button[type="submit_step"]{
     gap:100px;  
     justify-content: center;
 }
+
+/*CREATION RECETTE 3*/
+
+select[id="time_prepa_h"],[id="time_prepa_min"],[id="time_cooking_min"],[id="time_cooking_h"],[id="time_prepa_min"],[id="time_rest_min"],[id="time_rest_h"]{
+    width: 100px;
+    padding:5px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    margin-top: -10px;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+select[id="type_cuisson"]{
+    width: 250px;
+    padding:5px;
+    margin-left: 15px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+textarea[id="tags"]{
+    width: 320px;
+    height: 70px;
+    margin-top: 50px;
+    margin-left: 15px;
+    padding: 10px;
+    color: black;
+    font-size: 16px;
+    border: black solid 1px;
+    border-radius: 15px;
+    font-family: sans-serif;
+    resize: none;
+}
+
+.option_time_prepa{
+    margin-top: 50px;
+}
+
 
 
 
