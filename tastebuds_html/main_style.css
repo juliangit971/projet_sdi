@@ -1,0 +1,64 @@
+
+
+
+
+.header
+{
+    background-color: rgb(210, 106, 106);
+    display: flex ;
+    height : 60px;
+    align-items: center;
+}
+
+.logo 
+{
+    width: 400px;
+}
+.search
+{
+    flex: 1;
+}
+.disconnect
+{
+    width :200px;
+}
+input.main_search_bar
+{
+    
+    flex:1;
+}
+.filters_section
+{
+    display: inline-block;
+    width: 300px;
+    margin-top: 10px;
+    vertical-align: top;
+    border: 2px solid;
+    border-color: black;
+    background-color: bisque;
+}
+.filter
+{
+    margin: 6px;
+}
+.scrolable
+{
+    display : inline-block;
+    margin :30px;
+    margin-left: 130px;
+    background-color: bisque;
+}
+.information_generale {
+    display : inline-block;
+}
+
+.ligne{
+    display: flex ;
+    flex-direction: row;
+}
+.contenu_etape{
+    display: flex ;
+    flex-direction: row;
+}
+
+

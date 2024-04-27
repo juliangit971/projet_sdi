@@ -60,7 +60,7 @@ button[for="modifier"]{
     font-size:1.9vh;
 }
 
-p[id="name_recette"]{
+p[id="name"]{
     font-size: 20px;
     font-weight: bold;
     margin-left: 15px;
