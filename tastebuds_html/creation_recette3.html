@@ -19,7 +19,7 @@
 
 <header>
     
-    <a href ="accueil.html"><img  class="logo" src="images/TasteBuds.png"></a>
+    <a href ="*"><img  class="logo" src="images/TasteBuds.png"></a>
     
     <div class="search_bar">
 
@@ -29,13 +29,12 @@
     </div>
     
     
-    <label for="menu"><img  src="images/info.png"></label> 
-    
+    <label for="menu">
+
     <select name="menu" id="menu">
         <option value="" hidden required>  </option>
-    </select>
-
-    <img  class="profile" src ="images/profile.png" href="parameter.html"> </div>
+    </select></label> 
+    <img class="profile" src ="images/profile.png"></div>
     
 
 </header>
@@ -53,16 +52,24 @@
 
         <div class="option_time_prepa">
 
-            <select name="time_prepa" id="time_prepa">
-                <option value="" hidden required>Saisissez un temps de préparation</option>
+            <select name="time_prepa_h" id="time_prepa_h">
+                <option value="" hidden >heures</option> 
             </select>
+
+            <span>heures</span>
+
+            <select name="time_prepa_s" id="time_prepa_min">
+                <option value="" hidden > minutes</option> 
+            </select>
+
+            <span>minutes</span>
 
         </div>  
 
         <div class="option_type">
 
             <select name="type" id="type">
-                <option value="" hidden required>Saisissez un type de cuisson</option>
+                <option value="" hidden >Saisissez un type de cuisson</option>
             </select>
 
 
@@ -70,24 +77,39 @@
 
         <div class="option_time_cooking">
 
-            <select name="time_cooking" id="time_cooking">
-                <option value="" hidden required>Saisissez un temps de cuisson</option>
+            <select name="time_cooking_h" id="time_cooking_h">
+                <option value="" hidden >heures</option> 
             </select>
+
+            <span>heures</span>
+
+            <select name="time_cooking_s" id="time_cooking_min">
+                <option value="" hidden > minutes</option> 
+            </select>
+
+            <span>minutes</span>
 
 
         </div>      
 
         <div class="option_time_rest">
 
-            <select name="time_rest" id="time_rest">
-                <option value="" hidden required>Saisissez un temps de repos</option>
+            <select name="time_time_rest_h" id="time_time_rest_h">
+                <option value="" hidden required> heures </option>
             </select>
 
+            <span>heures</span>
+
+            <select name="time_time_rest_s" id="time_time_rest_min">
+                <option value="" hidden >minutes</option> 
+            </select>
+
+            <span>minutes</span>
 
         </div>  
         
 
-        
+        <textarea id="tags" placeholder=" Ajouter des tags "></textarea>
 
         
 
@@ -103,8 +125,8 @@
         
         <div class="option">
 
-            <a href="*">Retour à l'acceuil</a>
-            <p id="pop_up"> Souhaitez-vous conserver le brouillon ?</p>
+            <a href="accueil.html">Retour à l'acceuil</a>
+            
 
         </div>
 
