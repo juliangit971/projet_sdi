@@ -1,14 +1,13 @@
 section{
     display: flex;
     flex-direction: row;
-    flex:content;
     gap:55%;
     margin-left: 2.5%;
 }
 
 h1{
     color: #ECB77F;  
-    font-size: 240%;
+    font-size: 4.1vh;
 }
 
 button[for="modifier"]{
@@ -20,7 +19,7 @@ button[for="modifier"]{
     width: 17%;
     height: 5%;
     text-align: center;
-    font-size: 165%;
+    font-size:2.9vh;
     color: white;
     font-weight: bold;
     cursor: pointer;
@@ -58,7 +57,7 @@ button[for="modifier"]{
     opacity: 80%;
     border-top-left-radius: 15px; 
     border-top-right-radius: 15px;
-    font-size:100%;
+    font-size:1.9vh;
 }
 
 p[id="name_recette"]{
