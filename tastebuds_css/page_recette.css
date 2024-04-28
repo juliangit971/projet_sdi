@@ -1,0 +1,88 @@
+h1[for="fiche"]{
+    margin-left: 10%;
+    margin-top: 2%;
+    font-size: 6vh;
+    color:#F3BE85;
+}
+
+
+.fiche{
+    background-color: #F9F2E1;
+    border-radius: 5%;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 2%;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.title{
+    display: flex;
+    justify-content:center;
+    margin-top: 1%;
+}
+
+.image_recette{
+    display: flex;
+    justify-content: center;
+    
+}
+
+h1[for="info"]{
+    font-size: 2.3hv;
+    margin-left:4%;
+    padding: 0px;
+    font-weight:bold;
+}
+
+h3{
+    margin-left: 2%;
+}
+
+p{
+    width: 70%;
+}
+h3[id="step"]{
+    margin-left: 0.5%;
+}
+
+
+
+div[id="temps_prepa"]{
+    width: 24%;
+}
+
+ol[for="ingredients"]{
+    list-style-type: disc;
+}
+
+.ligne{
+    display: flex;
+    flex-direction: row;
+}
+
+.ligne_step{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+ol[for="step"]{
+    margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+li[id="step"]{
+    margin-top: 4%;
+    width: 65%;
+}
+
+.etape_image{
+    margin-right: 10%;  
+    width: 15%;
+}
+
+.etape_image img{
+    width: 80%;  
+}

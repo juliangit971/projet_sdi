@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+    
+<head>
+        <meta charset="utf-8">
+        <title> Taste Buds </title>
+        <link href="../tastebuds_css/header.css" rel="stylesheet">
+        <link href="../tastebuds_css/creation_recette.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rochester&display=swap" rel="stylesheet">
+    
+    
+</head>
+
+
+<body>
+
+<header>
+    
+    <a href ="accueil.html"><img  class="logo" src="images/TasteBuds.png"></a>
+    
+    <div class="search_bar">
+
+        <input type="search" placeholder="Rechercher une recette, un ingrédient...">
+        <button class="search"></button>
+        
+    </div>
+    
+    <div class="right_side">
+
+        <div class="dropdown">
+            <img class="info" src="images/info.png">
+            <div class="dropdown-content">
+
+                <a href="login.html">Se connecter</a>
+                <a href="page_parametre.html">Paramètre du compte</a>
+                <a href="pages_mes_recettes.html">Mes recettes</a>
+                <a href="enregistrement.html">Mes enregistrement</a>
+                <a href="creation_recette1.html">Creer ta recette</a>
+
+            </div>
+        </div>
+    
+    </div>
+
+    <img class="profile" src ="images/profile.png"></div>
+    
+
+</header>
+ 
+
+<main>
+
+    <div class="Create">
+
+        <h1>CRÉER UNE RECETTE</h1>
+        <h2>FINALISER LA RECETTE</h2>
+       
+        
+
+        <div class="option_time_prepa">
+            <h3>Sélectionner un temps de préparation</h3>
+            <select name="time_prepa_h" id="time_prepa_h">
+                <option value="" hidden >..................</option> 
+            </select>
+
+            <span>heures</span>
+
+            <select name="time_prepa_min" id="time_prepa_min">
+                <option value="" hidden >................</option> 
+            </select>
+
+            <span>minutes</span>
+
+        </div>  
+
+        <div class="option_type">
+            <h3>Sélectionner un type de cuisson</h3>
+            <select name="type_cooking" id="type_cooking">
+                <option value="" hidden >Saisissez un type de cuisson</option>
+            </select>
+
+
+        </div>
+
+        <div class="option_time_cooking">
+            <h3>Sélectionner un temps de cuisson</h3>
+            <select name="time_cooking_h" id="time_cooking_h">
+                <option value="" hidden >................</option> 
+            </select>
+
+            <span>heures</span>
+
+            <select name="time_cooking_min" id="time_cooking_min">
+                <option value="" hidden > ................</option> 
+            </select>
+
+            <span>minutes</span>
+
+
+        </div>      
+
+        <div class="option_time_rest">
+            <h3>Sélectionner un temps de repos</h3>
+            <select name="time_rest_h" id="time_rest_h">
+                <option value="" hidden required> ................ </option>
+            </select>
+
+            <span>heures</span>
+
+            <select name="time_rest_min" id="time_rest_min">
+                <option value="" hidden >................</option> 
+            </select>
+
+            <span>minutes</span>
+
+        </div>  
+        
+
+        <textarea id="tags" placeholder=" #Ajouter des tags "></textarea>
+
+        
+
+
+
+        <div class="interractive_button2">
+            
+            <a href="creation_recette2.html"> <button type="previous"> Étape précédente</button> </a>
+            
+            <a href="apercu_recette.html"> <button type="next"> Valider la recette </button> </a>
+
+        </div> 
+        
+        <div class="option">
+
+            <a href="accueil.html">Retour à l'acceuil</a>
+            
+
+        </div>
+
+    </div>
+
+
+
+
+</main>
+
+
+
+</body>

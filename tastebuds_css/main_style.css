@@ -1,0 +1,38 @@
+
+.parametre{
+    display: flex ;
+    flex-direction: row;
+   
+}
+.selection{
+    background-color: beige;
+}
+.option
+{
+    display: flex ;
+    flex-direction: row;
+}
+.scrolable
+{
+    display : inline-block;
+    margin :30px;
+    margin-left: 130px;
+    background-color: bisque;
+}
+.information_generale {
+    display : inline-block;
+}
+
+.ligne{
+    display: flex ;
+    flex-direction: row;
+}
+.contenu_etape{
+    display: flex ;
+    flex-direction: row;
+}
+
+.photo{
+    display: flex ;
+    flex-direction: row;
+}
