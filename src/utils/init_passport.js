@@ -23,13 +23,13 @@ function initialize(passport) {
 		const user = userUtils.getUserByEmail(email, dbUsers)
 
 		if (user == null) {    // If the user doesn't exist
-			return done(null, false, { message: "No user with that email!" })
+			return done(null, false, { message: "⚠ Adresse email incorrecte" })
 		}
 
 		if (user.activated_account == false) {   // If the account is activated yet
 
 			if (user.activation_token != "") {   // And it's not activated yet
-				return done(null, false, { message: "Please verify your email before logging in!" })
+				return done(null, false, { message: "⚠ Validez votre email avant de vous connecter" })
 			}
 		}
 
@@ -37,7 +37,7 @@ function initialize(passport) {
 			if (await bcrypt.compare(password, user.password)) {
 				return done(null, user)
 			} else {
-				return done(null, false, { message: "Incorrect password!" })
+				return done(null, false, { message: "⚠ Mot de passe incorrecte" })
 			}
 		} catch (err) {
 			return done(err)

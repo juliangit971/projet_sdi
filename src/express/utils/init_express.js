@@ -11,8 +11,9 @@ function initialize (app, flash, session, methodOverride) {
 
     app.set('view-engine', 'ejs');
     app.use(express.urlencoded({ extended: true }));
-    app.use("/medias", express.static('medias'));
     app.use("/jQuery", express.static("./src/jQuery"));
+    app.use("/css", express.static('css'));
+    app.use("/medias", express.static('medias'));
     app.use(flash());
     app.use(session({
         secret: process.env.SESSION_SECRET,
