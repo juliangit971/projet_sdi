@@ -39,6 +39,9 @@ h3{
     margin-left: 2%;
 }
 
+p{
+    width: 70%;
+}
 h3[id="step"]{
     margin-left: 0.5%;
 }
