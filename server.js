@@ -99,7 +99,7 @@ app.post('/register', expressUserUtils.checkNotAuthenticated, async (req, res) =
 
         for (i in dbUsers) {   // Vérifier si le mail n'existe pas déjà
             if (dbUsers[i]["email"] == req.body.email) {
-                res.render('register.ejs', { error: "Email already in use!" });
+                res.render('register.ejs', { error: "⚠ Cette adresse email est déjà liée à un compte" });
                 return
             }
         }
@@ -183,7 +183,7 @@ app.get('/validate/:userID/:validateID', (req, res) => {    // Vérifier l'email
 /** Forgotten Password **/
 
 app.get('/forgot-password', expressUserUtils.checkNotAuthenticated, (req, res) => {
-    res.render('forgot_password.ejs', { error: false });
+    res.render('forgot_password.ejs', { error: null });
 })
 
 app.post('/forgot-password', expressUserUtils.checkNotAuthenticated, async (req, res) => {   // Register an user
@@ -193,12 +193,12 @@ app.post('/forgot-password', expressUserUtils.checkNotAuthenticated, async (req,
         const user = userUtils.getUserByEmail(req.body.email, dbUsers);
 
         if (!user) {
-            res.render('forgot_password.ejs', { error: "No user with that email!" });
+            res.render('forgot_password.ejs', { error: "⚠ Adresse email incorrecte" });
             return;
         }
 
         if (user.activated_account == false) {
-            res.render('forgot_password.ejs', { error: "Acivate your account first!" });
+            res.render('forgot_password.ejs', { error: "⚠ Validez votre email avant de réinitialiser votre mot de passe" });
             return;
         }
 

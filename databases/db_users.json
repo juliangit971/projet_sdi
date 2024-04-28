@@ -12,19 +12,5 @@
         "saved_posts": [],
         "createdDraftPost": [],
         "created_posts": []
-    },
-    "1714322053740": {
-        "nickname": "x",
-        "email": "x@x",
-        "password": "$2b$10$IilhwiFpnJ2l4vtWmw5yNuEuNnyRL3CjqQVS7B5OZ2kscPi.DEk2W",
-        "profile_picture": null,
-        "grade": "user",
-        "activated_account": false,
-        "activation_token": "8y6sfyexBui81LmW2apIyybfDTFwDg0nmvcvPz5sBxNAmuVfnIO-oD-Y6Ez7",
-        "followed_users": [],
-        "liked_posts": [],
-        "saved_posts": [],
-        "createdDraftPost": [],
-        "created_posts": []
     }
 }

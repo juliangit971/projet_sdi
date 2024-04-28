@@ -90,11 +90,11 @@ a {
     text-decoration: none; 
 }
 
-a[href="signin.html"]{
+a[href="/register"]{
     margin-left: 190px;
 }
 
-a[href="accueil.html"]{
+a[href="/"]{
     font-size: 22px;
     margin-left: 160px;
 }

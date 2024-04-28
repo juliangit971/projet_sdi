@@ -91,7 +91,7 @@ a {
     text-decoration: none; 
 }
 
-a[href="accueil.html"]{
+a[href="/"]{
     font-size: 22px;
     margin-left: 160px;
 }
@@ -119,7 +119,7 @@ button[type="submit"]{
 }
 
 .left_side {
-    background-image: url("../tastebuds_html/images/fond_connexion.jpg");
+    background-image: url("/medias/website/common/fond_connexion.jpg");
     background-size: cover;
     height: 720px;
     width: 600px;;
