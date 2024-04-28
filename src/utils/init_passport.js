@@ -1,6 +1,6 @@
 /*
- *  - Initialize Passport.js
- */
+	- Initialiser Passport.js
+*/
 
 
 
@@ -8,10 +8,11 @@
 const LocalStrategy = require('passport-local').Strategy
 const bcrypt = require('bcrypt')
 // Databases
-const dbNames = require('../../databases/definitions/db_names.json')
-const dbUsers = require(`../../databases/${dbNames.users}`)
+const dbNames = require('../../databases/definitions/db_structure/db_names.json')
+const dbUsers = require(`../../databases/${dbNames.jsons.users}`)
 // User utils
-const userUtils = require('./users_utils')
+const userUtils = require('./user_utils')
+const eventLogger = require('../misc/event_logger')
 
 
 
@@ -44,9 +45,12 @@ function initialize(passport) {
 	}
 
 	passport.use(new LocalStrategy({ usernameField: 'email' }, authenticateUser))
-	passport.serializeUser((user, done) => done(null, user.id))
+	passport.serializeUser((user, done) => {
+		eventLogger("init_passport", "INFO", `User "${user.id}" (${user.email}) logged in successfully!`);
+		return done(null, user.id);
+	})
 	passport.deserializeUser((id, done) => {
-		return done(null, userUtils.getUserById(id, dbUsers))
+		return done(null, userUtils.getUserById(id, dbUsers));
 	})
 }
 

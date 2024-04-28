@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<div id="recipePart2">
+
+    <h2>Ingrédients & Etapes</h2>
+
+    <form method="POST" enctype="multipart/form-data" id="formPart2">
+
+        <div id="ingredients">
+            <label for="ingredient_1">Ingrédient :</label>
+            <input type="text" id="ingredient_1" name="ingredient_1" required>
+
+            <label for="quantity_1">Quantité :</label>
+            <input type="number" id="quantity_1" name="quantity_1" required>
+
+            <label for="unit_1">Unité :</label>
+            <input type="text" id="unit_1" name="unit_1" required>
+
+        </div>
+
+        <button type="button" id="addIngredient">Ajouter un ingrédient</button>
+
+        <div id="steps">
+            <label for="step_1">Etape 1 :</label>
+            <textarea id="description" name="step_1" rows="4" cols="30" required></textarea>
+
+            <input accept="image/png, .jpg, .jpeg, image/gif" type="file" id="stepInputFile_1" class="stepInputFile" name="stepInputFile_1"><br/>
+            <img class="stepImage" id="step_1_image" src="/medias/website/common/no_img_placeholder.png" height="100 px" alt="Image">
+
+        </div>
+        
+        <button type="button" id="addStep">Ajouter une étape</button><br/>
+
+
+        <button type="submit">Etape suivantes --></button>
+    </form>
+</div>

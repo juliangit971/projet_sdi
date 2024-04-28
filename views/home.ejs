@@ -14,14 +14,22 @@
     <body>
 
         <h1>Hi <%= name %></h1>
-
+        
 
         <% if (loggedin) { %>
+
+            <form action="/create-post" method="GET">
+
+                <button type="submit">Create a post!</button>
+
+            </form>
+
             <form action="/logout?_method=DELETE" method="POST">
 
                 <button type="submit">Log Out</button>
 
             </form>
+            
         <% } else { %>
 
             <form action="/login" method="GET">
@@ -35,6 +43,30 @@
                 <button type="submit">Register</button>
 
             </form>
+        <% } %>
+
+
+        <%  if (Object.keys(posts).length === 0) { %>
+
+            <p>There's no posts on the website yet <br/>Start posting NOW !</p>
+
+        <% } else { %>
+
+
+            <% Object.keys(posts).reverse().forEach(post => { %> <%# Permet d'inverser l'affichages des posts dans le JSON pour avoir les postes du plus récent au plus ancien %> 
+                
+                <% const publicationDate = new Date( Number(posts[post].timestamp) ).toLocaleDateString() %>  <%# Reprendre la date qui se trouve stocké dans le post %>
+                <% const publicationTime = new Date( Number(posts[post].timestamp) ).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}) %>  <%# Reprendre l'heure qui se trouve stocké dans le post %>
+
+                <div id="<%= post %>_div">
+                    <p id="<%= post %>_name">Recette : <%= posts[post].name %>  || [<%= publicationDate %> - <%= publicationTime %>] </p>
+                    <img id="<%= post %>_image" src="/medias/users/post_pictures/<%= posts[post].presentationImage %>" height="200 px" alt="Post Image">
+                    <p id="<%= post %>_description">Description : <%= posts[post].description %></p>
+                    <p id="<%= post %>_interractions">Likes : <%= posts[post].likedBy.length %> || Enregistrements : <%= posts[post].savedBy.length %></p><br/>
+                </div>
+
+            <% }); %>
+        
         <% } %>
 
     </body>

@@ -1,0 +1,33 @@
+{
+    "recipeCategories": [
+        "Sucré",
+        "Salé",
+        "Amer",
+        "Epicé",
+        "Acidulé"
+    ],
+    "recipeDifficulties": [
+        "Débutant",
+        "Facile",
+        "Moyen",
+        "Difficile",
+        "Expert"
+    ],
+    "tags": [
+        "test",
+        "easypeasy",
+        "yahoo",
+        "italie",
+        "france",
+        "ctropbon",
+        "sucresale",
+        "brunch",
+        "passidurqueça",
+        "balancetacuillere",
+        "baleze",
+        "chinois",
+        "zzz",
+        "miracle",
+        "cpasdessalades"
+    ]
+}
