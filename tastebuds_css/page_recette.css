@@ -43,12 +43,7 @@ h3[id="step"]{
     margin-left: 0.5%;
 }
 
-.infos1{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap:16%; 
-}
+
 
 div[id="temps_prepa"]{
     width: 24%;

@@ -53,7 +53,8 @@ input[type="search"] {
   cursor: pointer;
   width: 20px;
   height: 12px;
-  }
+  
+}
 
 .profile{
   scale:0.9;
