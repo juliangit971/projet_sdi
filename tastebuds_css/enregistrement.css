@@ -10,6 +10,12 @@ h1{
     font-size: 4.1vh;
 }
 
+.enregistrements{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 button[for="modifier"]{
     position: absolute;
     margin-top: 30px;
@@ -29,6 +35,8 @@ button[for="modifier"]{
     width: 25%;
     height: 25%;
     margin-left: 6%;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 .card{
