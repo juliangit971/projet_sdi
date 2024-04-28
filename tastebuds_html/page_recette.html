@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taste Buds</title>
-    <link href="main_style.css" rel="stylesheet">
+    <link href="../tastebuds_css/page_recette.css" rel="stylesheet">
     <link href="../tastebuds_css/header.css" rel="stylesheet">
     <link rel="stylesheet" href="enregistrement.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,14 +54,14 @@
 </header>
 
 
+<h1 for="fiche">Fiche de la recette</h1>
+    
 
-    <div class="title">
-        <h1 id="name">[Nom de la recette]</h1>
-    </div>
+    <div class="fiche">
 
-    <div class="scrolable">
-
-        <div  class ="aperçue_recette" >
+        <div class="title">
+            <h1 id="name">[Nom de la recette]</h1>
+        </div>
 
             <div class="image_recette">
 
@@ -71,74 +71,74 @@
 
             <div class="information_generale" >
 
-                <h2>information generale</h2>
+                <h1 for="info">Informations générales</h1>
 
-                <div class="ligne">
+                <div class="infos1">
 
-                    <h3>difficuty:</h3>
-                    <h4>facile</h4>
+                    <div class="ligne">
 
-                </div>
+                        <h3>Difficulté:</h3>
+                        <h4>[Difficulté]</h4>
 
-                <div class="ligne">
-
-                    <h3>origine :</h3>
-                    <h4>france</h4>
-
-                </div>
-
-                <div class="ligne">
-                    <h3>categorie:</h3>
-                    <h4>entrée</h4>
-                </div>
-
-                <div class="ligne">
-                    <h3>liste d'ingrédient:</h3>
-                    <ol>
-                        <li>chocolat</li>
-                        <li>pate</li>
-                        <li>sucre</li>
-                    </ol>
-          
-                </div>
-            </div>
-
-            <div class="etape">
-
-                <h2> etape </h2>
-
-                <div class ="contenu_etape">
-                    <div class="etape_text">
-                        <p>Les crêpes sont un mets délicieux composé d’une fine couche de pâte à base de farine et d’œufs, agglomérés à un liquide tel que le lait (parfois mélangé à de l’eau ou de la bière), sans levain. Elles sont généralement de forme ronde et peuvent être dégustées</p>
                     </div>
 
-                    <div class="etape_image">
-                        <img src="images/crepe.webp" alt="Description of the image"width="300">
+                    <div class="ligne" id="temps_prepa">
+
+                        <h3>Temps de préparation:</h3>
+                        <h4>[..h..min]</h4>
+
                     </div>
+
+                    <div class="ligne">
+                        <h3>Catégorie:</h3>
+                        <h4>[Catégorie]</h4>
+                    </div>
+
                 </div>
 
-            </div>
-
-            <div class="etape">
-
-                <h2>etape</h2>
-
-                <div class ="contenu_etape">
-
-                    <div class="etape_text">
-                        <p> Les crêpes sont un mets délicieux composé d’une fine couche de pâte à base de farine et d’œufs, agglomérés à un liquide tel que le lait (parfois mélangé à de l’eau ou de la bière), sans levain. Elles sont généralement de forme ronde et peuvent être dégustées</p>
                 
+                    <h3>Liste d'ingrédients:</h3>
+                    <ol for="ingredients">
+                        <div id="ingredient" class="ligne">
+                            <li id="ingredient">Ingrédient 1</li> 
+                            <span id="unit">[Unité]</span>
+                        </div>
+                        <div id="ingredient" class="ligne">
+                            <li id="ingredient">Ingrédient 2</li> 
+                            <span id="unit">[Unité]</span>
+                        </div>                       
+                    </ol>
+                    
+                
+            </div>
+
+            <div class="preparation">
+                <h3>Préparation</h3> 
+    
+                <ol for="step">
+
+                    <div class="ligne_step">
+                        <li id="step">Verser la farine dans le bol</li>
+                            <div class="etape_image">
+                                <img src="images/crepe.webp" alt="Description of the image"width="300">
+                            </div>
                     </div>
 
-                    <div class="etape_image">
+                    <div class="ligne_step">
+                        <li id="step">Verser le lait et mélanger jusqu'à obtenir une pate ferme adijfjz cbadvabvjbjvbsjdbvjqbdsvdjfvbahudfbcahjgcz  ebhfjgaeczvfbgaefbcazejvfgbahfab</li>
+                            
+                        </div> 
+                        
+                        <div class="ligne_step">
+                            <li id="step">M.Martin ne corrige pas les copies</li>
+                                <div class="etape_image">
+                                    <img src="images/crepe.webp" alt="Description of the image"width="300">
+                                </div>  
+                        </div>  
 
-                        <img src="images/crepe.webp" alt="Description of the image"width="300">
+                </ol>
 
-                    </div>
-                </div>
-
-            </div>   
-        </div>
+            </div>
 
     </div>
 
