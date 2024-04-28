@@ -1,126 +1,136 @@
-body{
-    background:linear-gradient(to right,#F3BE85,#FFEAD2) ;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+body {
+  background: linear-gradient(to right, #f3be85, #ffead2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 .container {
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .left_side {
-    background-color: white;
-    height: 720px;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    display: flex;
-    flex-direction: column;
-    width: 600px;
+  background-color: white;
+  height: 720px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 600px;
 }
 
-h1{
-    font-family: 'Poppins',sans-serif;
-    margin-left: 50px;
-    margin-top: 90px;
-    font-size: 45px;
+h1 {
+  font-family: "Poppins", sans-serif;
+  margin-left: 50px;
+  margin-top: 90px;
+  font-size: 45px;
 }
 
 .interactive_button {
-    display: flex;
-    flex-direction: column;   
+  display: flex;
+  flex-direction: column;
 }
 
-label[for="email"],label[for="password"] {
-    margin-left: 90px;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
+label[for="email"],
+label[for="password"] {
+  margin-left: 90px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
 }
 
-input[type="email"],input[type="password"] {
-    width: 420px;
-    padding: 15px;
-    border: 1px solid #000000;
-    border-radius: 12px;
-    font-size: 16px;
-    margin: auto;
-    font-weight: bold;
+input[type="email"],
+input[type="password"] {
+  width: 420px;
+  padding: 15px;
+  border: 1px solid #000000;
+  border-radius: 12px;
+  font-size: 16px;
+  margin: auto;
+  font-weight: bold;
 }
 
 .opt {
-    font-size: 1em;
-    font-family: 'Roboto', sans-serif;
-    margin-left: 118px;
-    margin-top: 10px;
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  margin-left: 118px;
+  margin-top: 10px;
+}
+
+.opt2 {
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  margin-top: 10px;
 }
 
 a {
-    color: black;
-    text-decoration: none; 
+  color: black;
+  text-decoration: none;
 }
 
-a[href="signin.html"]{
-    margin-left: 190px;
+a[href="accueil.html"] {
+  font-size: 22px;
+  margin-top: 25px;
 }
 
-a[href="accueil.html"]{
-    font-size: 22px;
-    margin-left: 160px;
+.lien {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .login-btn {
-    margin-left:180px;
-    margin-top: 40px;
-    margin-bottom: 10px;
-    background-color: #F3BE85;
-    border-radius: 30px;
-    border: 0px;
-    width: 230px;
-    height: 55px;
-    text-align: center;
-    color: white;
-    font-weight: bolder;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  background-color: #f3be85;
+  border-radius: 30px;
+  border: 0px;
+  width: 230px;
+  height: 55px;
+  text-align: center;
+  color: white;
+  font-weight: bolder;
 }
 
-.login-btn:hover{
-    transform: scale(1.05);
+.login-btn:hover {
+  transform: scale(1.05);
 }
 
-button[type="submit"]{
-    font-size: 24px;
+button[type="submit"] {
+  font-size: 24px;
 }
 
 .right_side {
-    background-image: url("../tastebuds_html/images/fond_connexion.jpg");
-    background-size: cover;
-    height: 720px;
-    width: 600px;;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  background-image: url("../tastebuds_html/images/fond_connexion.jpg");
+  background-size: cover;
+  height: 720px;
+  width: 600px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-img{
-    scale: 0.6;
-    margin-top: 10vh;
+img {
+  scale: 0.6;
+  margin-top: 10vh;
 }
 
-h2{
-    font-family: 'Sahitya';
-    font-size:32px;
-    padding:10px;
-    margin:0;
-    font-weight: 100;
+h2 {
+  font-family: "Sahitya";
+  font-size: 32px;
+  padding: 10px;
+  margin: 0;
+  font-weight: 100;
 }
-
