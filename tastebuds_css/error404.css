@@ -1,0 +1,21 @@
+body{
+    display: flex;
+    
+    justify-content: center;
+
+}
+
+.text{
+    justify-content: center;
+    margin-left: 40%
+}
+h1,p{
+
+    font-size: 30px;
+}
+img{
+    height: 70%;
+    width: 70%;
+
+    margin-left: 16%;
+}
