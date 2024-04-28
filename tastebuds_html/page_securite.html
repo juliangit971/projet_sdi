@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../tastebuds_css/main_style.css">
+    <link rel="stylesheet" href="../tastebuds_css/parameter.css">
     <link rel="stylesheet" href="../tastebuds_css/header.css">
 </head>
 
@@ -44,54 +44,53 @@
 <div class="parametre">
 
     <div class="selection">
-        <h2>
-            parametre de compte
-        </h2>
+        <h2> Paramètres du compte</h2>
 
         <div class="option">
 
-            <img src="images/cog-outline.png" width="60">
-            <h3>informations</h3>
+            <img src="images/cog-outline.png" >
+            <a href="page_parametre.html">Informations</a>
 
         </div>
 
         <div class="option"> 
-            <img src="images/lock_icon_1.png" width="60">
-            <h3>sécurité</h3>
+            <img src="images/lock_icon_1.png" >
+            <a href="page_securite.html">Sécurité</a>
         </div>
 
         <div class="option">
-            <img src="images/account-group.png" width="60">
-            <h3>utilisateurs suivis</h3>
+            <img src="images/account-group.png" >
+            <a href="page_securite.html">Utilisateurs suivis</a>
         </div>
 
-        <div class="option">
-            <img src="images/logout-variant.png" width="60">
-            <h3>se déconnecter</h3>
+        <div class="option" id="deconnexion">
+            <img src="images/logout-variant.png" >
+            <a href="accueil.html">Se deconnecter</a>
         </div>
+
 
     </div>
 
-    <div class="scrolable">
-        <h1>sécurité</h1>
+    <div class="information">
 
-        <div>
+        <h1>Sécurité</h1>
 
-            <label for="password">Ancien mot de passe</label>
+        <div class="interactive_button">
+
+            <h4>Ancien mot de passe </h4>
             <input type="password" id="password" name="password" placeholder ="ancien mot de passe" required>
 
         </div>
 
-        <div>
-
-            <label for="password">Nouveau mot de passe</label>
+        <div class="interactive_button">
+            <h4>Nouveau mot de passe </h4>
             <input type="password" id="password" name="password" placeholder ="nouveau le mot de passe" required>
 
         </div>
 
-        <div>
+        <div class="interactive_button">
 
-            <label for="password">Confirmez mot de passe</label>
+            <h4>Confirmez mot de passe </h4>
             <input type="password" id="password" name="password" placeholder ="confirmez le  mot de passe" required>
 
         </div>
@@ -100,8 +99,8 @@
 
     </div>
 
-
-  </body>
+</div>
+</body>
 
 
 </html>
