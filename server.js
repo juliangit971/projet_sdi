@@ -11,8 +11,6 @@ const expressUserUtils = require('./src/express/utils/login_status');
 const passport = require('passport');
 const initPassport = require("./src/utils/init_passport");
 const bcrypt = require('bcrypt');
-// Multer (File upload manager)
-//const multer = require('multer');
 const fileUploadMethods = require('./src/utils/multer_upload_methods');
 // Databases
 const initDatabases = require('./src/utils/init_databases');
@@ -27,7 +25,6 @@ const dbPath = "./database/"
 // Utilities
 const utils = require('./src/utils/utilities');
 const userUtils = require('./src/utils/user_utils');
-//const path = require('path');
 // Misc.
 const eventLogger = require('./src/misc/event_logger');
 const fm = require('./src/utils/file_manager');
@@ -132,6 +129,19 @@ app.post('/register', expressUserUtils.checkNotAuthenticated, async (req, res) =
 })
 
 
+app.get('/logout', expressUserUtils.checkAuthenticated, (req, res, next) => {  // Logout an user (similaire à la méthode "DELETE")
+
+    const loggedOutUser = req.user  // Permet de ne pas perdre l'identité de l'utilisateur après sa déconnection
+
+    req.logOut(err => {
+        if (err) { return next(err) }
+    });
+    
+    eventLogger("SERVER", "INFO", `User "${loggedOutUser.id}" (${loggedOutUser.email}) logged out successfully`)
+
+    res.redirect('/login');
+})
+
 app.delete('/logout', expressUserUtils.checkAuthenticated, (req, res, next) => {  // Logout an user
 
     const loggedOutUser = req.user  // Permet de ne pas perdre l'identité de l'utilisateur après sa déconnection
@@ -218,6 +228,32 @@ app.post('/forgot-password', expressUserUtils.checkNotAuthenticated, async (req,
 })
 
 /* Main website */
+
+/** Layout **/
+
+app.get('/api/layout/:websiteElement', expressUserUtils.checkAuthenticatedAndNotBlocked, (req, res) => {
+
+    switch (req.params.websiteElement) {
+        case "header" :   // Envoyer la 1ère partie du formulaire
+
+            let username;
+            let logginStatus;
+
+            // Vérifier si l'utilisateur est connecté ou pas
+            try {
+                username = req.user.nickname;
+                logginStatus = true;
+            } catch (error) {
+                username = "Guest";
+                logginStatus = false;
+            }
+
+            res.render('fragments/layout/header.ejs', { logginStatus: logginStatus });
+            return;
+    }
+
+    return res.status(404);
+})
 
 /** Create a post **/
 

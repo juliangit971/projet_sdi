@@ -9,7 +9,7 @@ main{
     align-items: center;
 }
 
-.Create{
+.create{
     width: 800px;
     height: 100%;
     padding-bottom: 30px;
@@ -54,7 +54,7 @@ select[id="difficulty"],[id="category"]{
     font-size: 16px;
 }
 
-input[type="name"]{
+input[type="text"]{
     margin-left:15px;
     margin-bottom: 15px;
     width: 400px;
@@ -105,8 +105,8 @@ input[type="file"]{
     display: none;
 }
 
-label[for="image_button1"] img{
-    scale: 1.5;
+label[for="inputFile"] img{
+    height: 80px;
     cursor: pointer;
     padding: 10px;
     background-color: #F9F2E1;
@@ -116,7 +116,7 @@ label[for="image_button1"] img{
     margin-top: 10px;
 }
 
-button[type="next"],[type="previous"]{
+button[type="submit"],[type="previous"]{
     margin-top: 30px;
     background-color: #F3BE85;
     border-radius: 30px;
@@ -137,7 +137,7 @@ button[type="next"],[type="previous"]{
     margin-bottom: 15px;
 }
 
-a[href="accueil.html"]{
+a[href="/"]{
     color: black;
     text-decoration: none;
     font-weight: bold;

@@ -31,7 +31,7 @@ input[type="search"] {
 
 .search{
   background-color: #FFEAD2;
-  background-image: url("../tastebuds_html/images/search_button.png");
+  background-image: url("/medias/website/common/search_button.png");
   background-size: cover;
   border: none;
   width: 30px;
