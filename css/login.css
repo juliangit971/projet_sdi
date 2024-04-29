@@ -76,16 +76,13 @@ a {
   text-decoration: none;
 }
 
-a[href="accueil.html"] {
-  font-size: 22px;
-  margin-top: 25px;
+a[href="/register"]{
+    margin-left: 190px;
 }
 
-.lien {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+a[href="/"]{
+    font-size: 22px;
+    margin-left: 160px;
 }
 
 .login-btn {
@@ -110,16 +107,16 @@ button[type="submit"] {
 }
 
 .right_side {
-  background-image: url("../tastebuds_html/images/fond_connexion.jpg");
-  background-size: cover;
-  height: 720px;
-  width: 600px;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    background-image: url("/medias/website/common/fond_connexion.jpg");
+    background-size: cover;
+    height: 720px;
+    width: 600px;;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 img {

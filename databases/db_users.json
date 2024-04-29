@@ -1,1 +1,16 @@
-{}
+{
+    "1713702810333": {
+        "nickname": "w",
+        "email": "w@w",
+        "password": "$2b$10$lmVtrv2b1RhZKDkp12ZQ.OUuD3Sn6/5SsVXpH9Bl4XSIDiioGqqf6",
+        "profile_picture": null,
+        "grade": "user",
+        "activated_account": true,
+        "activation_token": "",
+        "followed_users": [],
+        "liked_posts": [],
+        "saved_posts": [],
+        "createdDraftPost": [],
+        "created_posts": []
+    }
+}

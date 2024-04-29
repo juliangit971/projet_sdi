@@ -1,0 +1,11 @@
+{
+    "jsons": {
+        "users" : "db_users",
+        "posts" : "db_posts",
+        "draftPosts": "db_draft_posts"
+    },
+    "paths": {
+        "draftPostImagesPath": "./medias/users/draft_posts_pictures",
+        "postImagesPath": "./medias/users/post_pictures"
+    }
+}

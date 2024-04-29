@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+
+<a href ="/"><img  class="logo" src="/medias/website/common/TasteBuds.png"></a>
+
+<div class="search_bar">
+    <input type="search" placeholder="Rechercher une recette, un ingrédient...">
+    <button class="search"></button>
+</div>
+
+
+<div class="right_side">
+    <div class="dropdown">
+        <img class="info" src="/medias/website/common/info.png">
+        <div class="dropdown-content">
+            
+            <% if (logginStatus == false) { %>
+                <a href="/login">Se connecter</a>
+            <% } else { %>
+                <a href="/create-post">Créer ta recette</a>
+                <a href="/my-recipes">Mes recettes</a>
+                <a href="/saved-posts">Mes enregistrement</a>
+                <a href="/account-settings">Paramètre du compte</a>
+                <a href="/logout">Se déconnecter</a>
+            <% } %>
+            
+
+        </div>
+    </div>
+</div>
+
+<img class="profile" src ="/medias/website/common/profile.png"></div>

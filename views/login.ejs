@@ -5,36 +5,91 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        
 
-        <title>Login</title>
+        <% if (messages.error) {
+            switch (messages.error[0]) {
+                case "⚠ Mot de passe incorrecte": %>
+                    <link rel="stylesheet" href="/css/login_wrong_password.css">
+                    <% break;
+            
+                case "⚠ Adresse email incorrecte": %>
+                    <link rel="stylesheet" href="/css/login_wrong_email.css">
+                    <% break;
+                default: %>
+                    <link rel="stylesheet" href="/css/login_wrong_email.css">
+            <% } %>
+              
+        <% } else { %>
+            <link rel="stylesheet" href="/css/login.css">
+        <% } %>
 
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rochester&display=swap" rel="stylesheet">
+
+        <title>Tastebuds - Connexion</title>
     </head>
 
 
     <body>
 
-        <h1>Login</h1>
+        <div class="container">
 
-        <% if (messages.error) { %>
-            <%= messages.error %>  
-        <% } %>
+            <div class="left_side">
+                <h1>Connexion</h1>
+            
+                <form action="/login" method="post" class="login-form">
+            
+                    <div class="interactive_button">
+                
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" placeholder ="Adresse mail" required>
+                        <% if (messages.error && (messages.error[0] == "⚠ Adresse email incorrecte" || messages.error[0] == "⚠ Validez votre email avant de vous connecter") ) { %>
+                            <p><%= messages.error[0] %></p>
+                        <% } %>
 
-        <form action="/login" method="POST">
+                    </div>
+            
+                    <div class="interactive_button">
+                
+                        <label for="password">Mot de passe :</label>
+                        <input type="password" id="password" name="password" placeholder ="Mot de passe"required>
+                        <% if (messages.error && messages.error[0] == "⚠ Mot de passe incorrecte") { %>
+                            <p><%= messages.error[0] %></p>
+                        <% } %>
 
-            <div>
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" required>
+                        <a href="/forgot-password" class="opt">Mot de passe oublié ?</a>
+            
+                    </div>
+            
+                    <button type="submit" class="login-btn">Se connecter</button>
+                    <br>
+                    <a href="/register" class="opt">Pas de compte ? Créez-en un !</a>
+                    <br>  
+                    <br>
+                    <br>
+                    <br>
+                    <a href="/" class="opt">Continuez sans se connecter</a>
+                 
+                </form>
+        
+        
+            </div>   
+    
+    
+            <div class="right_side">
+                
+                <img  src="/medias/website/common/TasteBuds.png"> 
+                <h2> Vos papilles aussi ont besoin de </h2>
+                <h2> voyage !</h2>
+    
             </div>
-
-            <div>
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-
-            <button type="submit">Login</button>
-        </form>
-
-        <a href="/register">Register</a>
+    
+        </div>
         
     </body>
 </html>

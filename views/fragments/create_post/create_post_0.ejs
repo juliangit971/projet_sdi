@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<main>
+
+    <div id="recipePart1" class="create">
+
+        <h2>Informations de la recette</h2>
+        
+        <form method="POST" enctype="multipart/form-data" id="formPart1">
+
+
+            <h1>CRÉER UNE RECETTE</h1>
+            <h2>INFORMATIONS DE LA RECETTE</h2>
+            <br>
+
+            <div class="option">
+                <h3>NOM DE LA RECETTE: </h3>
+                <input type="text" id="recipeName" name="recipeName" placeholder ="Saisissez un nom" required>
+            </div>
+
+            <div class="option">
+                <select id="category" name="category" required>
+                    <option value="" hidden>Saisissez une catégorie</option>
+                    <% postSettings.recipeCategories.forEach( (category, i) => { %>
+                        <option value= <%= i %> ><%= category  %></option>
+                    <% }); %>
+                </select> 
+            </div>
+
+
+            <div class="option">
+                <select id="difficulty" name="difficulty" required>
+                    <option value="" hidden>Saisissez une difficulté</option>
+                    <% postSettings.recipeDifficulties.forEach( (category, i) => { %>
+                        <option value= <%= i %> ><%= category  %></option>
+                    <% }); %>
+                </select> 
+            </div>
+
+
+            <div class="option">
+
+                <h3 for="description">DESCRIPTION (OPTIONNEL):</h3>
+                <textarea id="description" name="description" placeholder=" Parlez-nous de la recette !"></textarea>
+
+            </div> 
+
+
+            <div class="option">
+                <h3>IMAGE DE PRÉSENTATION:</h3>
+
+                <label for="inputFile">
+                    <img id="presentationImage" src="/medias/website/common/camera-outline.png" alt="Image affichée">
+                    <input accept="image/png, .jpg, .jpeg, image/gif" type="file" id="inputFile" name="inputFile" required>
+                </label>
+            </div>
+
+
+            <div class="interractive_button1">
+                <a href=""><button type="submit">Étape suivante</button></a>
+            </div> 
+
+
+            <div class="lien_accueil">
+                <a href="/">Retour à l'accueil</a>
+                <!--<p id="pop_up"> Souhaitez-vous conserver le brouillon ?</p>-->
+            </div>
+
+
+        </form>
+        
+    </div>
+</main>

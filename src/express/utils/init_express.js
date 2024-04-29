@@ -10,7 +10,10 @@ const passport = require('passport');
 function initialize (app, flash, session, methodOverride) {
 
     app.set('view-engine', 'ejs');
-    app.use(express.urlencoded({ extended: false }));
+    app.use(express.urlencoded({ extended: true }));
+    app.use("/css", express.static('css'));
+    app.use("/jQuery", express.static("./src/jQuery"));
+    app.use("/medias", express.static('medias'));
     app.use(flash());
     app.use(session({
         secret: process.env.SESSION_SECRET,

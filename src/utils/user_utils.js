@@ -1,3 +1,9 @@
+/*
+	- Fonctions permettent de retrouver un utilisateur dans la DB par un attribut
+*/
+
+
+
 function getUserByEmail (email, userDB) {
 
 	for (i in userDB) {

@@ -1,10 +1,12 @@
 /* 
- *  - Advanced console.log with date and hour
- */
+    - Advanced console.log with date and hour
+*/
 
 
 module.exports = (source, type, message, borderCharSource) => {
 
+    borderCharSource = (borderCharSource ? borderCharSource : '')
+    if (source.toLowerCase() == "server" && borderCharSource == '') borderCharSource = "~";
     const currentDate = new Date;
     const year = `${currentDate.getFullYear()}`;
     const months = `${(currentDate.getMonth()+1) < 10 ? "0" : ""}${currentDate.getMonth()+1}`;
