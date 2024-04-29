@@ -53,49 +53,49 @@
   
 </header>
 
-
+<main>
 <h1 for="fiche">Fiche de la recette</h1>
     
 
     <div class="fiche">
 
-        <div class="title">
-            <h1 id="name">[Nom de la recette]</h1>
+            <div class="image_recette">
+
+                <img id="image_recette" src="images/crepe.webp" alt="Description of the image">
+
+            </div>
+
+        <div class="row_under_image">
+            <div class="row_left_side">
+            <div class="title">
+                <h1 id="name">[Nom de la recette]</h1>
+            </div>
+
+            <div class="like">
+
+                <img src="images/like.png" >
+                <span id="number_like">[.....]</span>
+
+            </div>
+        </div>        
+            <div class="share">
+
+                <img src="images/enregister.png" >
+
+            </div>
+
         </div>
-
-
-
-        <div class="image_recette">
-
-            <img src="images/crepe.webp" alt="Description of the image">
-
-        </div>
-
-        <div class="like">
-
-            <img src="images/like.png" >
-            <span id="number_like">Nombre de like</span>
-
-        </div>
-                
-        <div class="share">
-
-            <img src="images/enregister.png" >
-
-        </div>
-
 
         <div class="information_generale" >
 
-            <h1 for="info_gene">Informations générales</h1>
+            <div class = "infos_colonne">
 
             <div class="infos1">
                 
-
                 <div class="ligne">
 
                     <h3>Temps de préparation:</h3>
-                    <span id="time_prepa_h"></span><p>..h..</p><span id="time_prepa_min"></span>
+                    <span id="time_prepa_h"></span><p>h</p><span id="time_rest_min"></span>
                     
                 </div>
 
@@ -110,14 +110,14 @@
                 <div class="ligne">
 
                     <h3>Temps de cuisson:</h3>
-                    <span id="time_cooking_h"></span><p>..h..</p><span id="time_cooking_min"></span>
+                    <span id="time_cooking_h"></span><p>h</p><span id="time_rest_min"></span>
                     
                 </div>
 
                 <div class="ligne">
 
                     <h3>Temps de repos:</h3>
-                    <span id="time_rest_h"></span><p>..h..</p><span id="time_rest_min"></span>
+                    <span id="time_rest_h"></span><p>h</p><span id="time_rest_min"></span>
                     
                 </div>
                 
@@ -138,24 +138,28 @@
 
                 </div>
 
-
+            </div>
             </div>
 
-            <h3>Description</h3>
-            <p id="description"> Ceci est la description aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaa    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaassssssssssssssssssssssssssssssssssssssssssssssaaaaaaaaaaa </p>
-            <h3>Liste d'ingrédients:</h3>
+            <div class="description">
+                <h3>Description</h3>
+                <p id="description"> Ceci est la description aaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaa aaaaaaaaaaa aaaaaaaaaa aaaaaaaaaaa aaaaaaaaaa aaaaaaaaaaa aaaaaaaaaa aaaaaaaaaaa aaaaaaaaaaaaaaa    aaaaaaaaaaa aaaaaaaaaaa aaaaaaaaa aaaaaaaaaaa aaaaaaa sssssss sssssss sssssss sssssss sssssss ssss sssssssaaaa aaaaaaa </p>
+            </div>
 
+            <h3 for="liste_ingredients">Liste d'ingrédients:</h3>
             <ol for="ingredients">
 
-                <div id="ingredient" class="ligne">
+                <div id="ingredient" class="ligne_ingredient">
 
                     <li id="ingredient">Ingrédient 1</li> 
+                    <span id="quantity">[Quantité]</span>
                     <span id="unit">[Unité]</span>
 
                 </div>
 
-                <div id="ingredient" class="ligne">
+                <div id="ingredient" class="ligne_ingredient">
                     <li id="ingredient">Ingrédient 2</li> 
+                    <span id="quantity">[Quantité]</span>
                     <span id="unit">[Unité]</span>
                 </div>                       
             </ol>
@@ -198,7 +202,7 @@
         </div>
 
     </div>
-
+</main>
 </body>
 
 
