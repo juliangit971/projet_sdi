@@ -62,15 +62,19 @@ $(function () {
                             ingredientSections++;
 
                             $('#ingredients').append(`
-                                <br/>
-                                <label for="ingredient_${ingredientSections}">Ingrédient :</label>
-                                <input type="text" id="ingredient_${ingredientSections}" name="ingredient_${ingredientSections}" required>
-                    
-                                <label for="quantity_${ingredientSections}">Quantité :</label>
-                                <input type="number" id="quantity_${ingredientSections}" name="quantity_${ingredientSections}" required>
-                    
-                                <label for="unit_${ingredientSections}">Unité :</label>
-                                <input type="text" id="unit_${ingredientSections}" name="unit_${ingredientSections}" required>
+
+                                <div class="option_ingredient">
+                                
+                                    <input class="ingredient" id="ingredient_${ingredientSections}" name="ingredient_${ingredientSections}" placeholder ="Saisissez un ingrédient" type="text" required>
+                                    <br>
+                        
+                                    <div class="second_line">
+                                        <input  class="quantity" id="quantity_${ingredientSections}" name="quantity_${ingredientSections}" placeholder ="Saisissez une quantité" type="number" required>
+                                        <input  class="unit" id="unit_${ingredientSections}" name="unit_${ingredientSections}" placeholder ="Saisissez une unité" type="text" required>
+                                    </div>
+
+                                </div>
+
                             `)
                         });
 
@@ -79,12 +83,17 @@ $(function () {
                             stepSections++;
 
                             $('#steps').append(`
-                                <br/>
-                                <label for="step_${stepSections}">Etape ${stepSections} :</label>
-                                <textarea id="description" name="step_${stepSections}" rows="4" cols="30" required></textarea>
 
-                                <input accept="image/png, .jpg, .jpeg, image/gif" type="file" id="stepInputFile_${stepSections}" class="stepInputFile" name="stepInputFile_${stepSections}"><br/>
-                                <img class="stepImage" id="step_${stepSections}_image" src="/medias/website/common/no_img_placeholder.png" height="100 px" alt="Image">
+                                <div class="option_step">
+
+                                    <textarea  class="step" id="description" name="step_${stepSections}" placeholder ="Étape ${stepSections} de la recette..." required></textarea>
+
+                                    <label class="image_button2" for="stepInputFile_${stepSections}">
+                                        <img src="/medias/website/common/camera-outline.png" class="stepImage" id="step_${stepSections}_image" alt="Image affichée">
+                                        <input type="file" id="stepInputFile_${stepSections}" class="stepInputFile" name="stepInputFile_${stepSections}" accept="image/png, .jpg, .jpeg">
+                                    </label>
+
+                                </div>
                             `)
                             
                         });

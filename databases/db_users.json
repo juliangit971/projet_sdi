@@ -12,5 +12,19 @@
         "saved_posts": [],
         "createdDraftPost": [],
         "created_posts": []
+    },
+    "1714427301127": {
+        "nickname": "WC",
+        "email": "a@a",
+        "password": "$2b$10$lRqNhD2PtycNNkx8n6mRtO3EtimTkeIm1tmruG0pMSyAk24cv6Zx6",
+        "profile_picture": null,
+        "grade": "user",
+        "activated_account": true,
+        "activation_token": "",
+        "followed_users": [],
+        "liked_posts": [],
+        "saved_posts": [],
+        "createdDraftPost": [],
+        "created_posts": []
     }
 }

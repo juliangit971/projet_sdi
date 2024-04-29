@@ -146,7 +146,7 @@ a[href="/"]{
 
 /*RECETTE 2*/
 
-input[id="ingredient"],[id="quantity"],[id="unit"]{  
+input[class="ingredient"],[class="quantity"],[class="unit"]{  
     margin-left:15px;
     margin-bottom: 10px;
     width: 170px;
@@ -157,15 +157,15 @@ input[id="ingredient"],[id="quantity"],[id="unit"]{
     border-right: none;
 }
 
-input[id="ingredient"]{
+input[class="ingredient"]{
     margin-top: 13px;
 }
 
-input[id="unit"]{
+input[class="unit"]{
     margin-left: 30px;
 }
 
-input[id="ingredient"],[id="quantity"],[id="unit"]:focus{
+input[class="ingredient"],[class="quantity"],[class="unit"]:focus{
     outline:none;
 }
 
@@ -185,7 +185,7 @@ input[id="ingredient"],[id="quantity"],[id="unit"]:focus{
     height: 100px;
 }
 
-textarea[id="step"]{
+textarea[class="step"]{
     width: 580px;
     height: 80px;
     margin-top: 50px;
@@ -204,8 +204,8 @@ textarea[id="step"]{
     flex-direction: row;
 }
 
-label[for="image_button2"] img{
-    scale: 1.5;
+label[class="image_button2"] img{
+    height: 75px;
     cursor: pointer;
     padding: 10px;
     background-color: #F9F2E1;
@@ -229,11 +229,11 @@ label[for="image_button2"] img{
     cursor: pointer;
 }
 
-button[type="submit_ingredient"]{
+button[id="addIngredient"]{
     width: 230px;
 }
 
-button[type="submit_step"]{
+button[id="addStep"]{
     width: 340px;
     margin-bottom: 30px;
 }

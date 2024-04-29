@@ -1,37 +1,61 @@
 <!DOCTYPE html>
 
-<div id="recipePart2">
 
-    <h2>Ingrédients & Etapes</h2>
+<main>
 
-    <form method="POST" enctype="multipart/form-data" id="formPart2">
+    <div id="recipePart2" class="create">
 
-        <div id="ingredients">
-            <label for="ingredient_1">Ingrédient :</label>
-            <input type="text" id="ingredient_1" name="ingredient_1" required>
+        <h1>CRÉER UNE RECETTE</h1>
+        <h2>INGRÉDIENTS ET ÉTAPES</h2>
 
-            <label for="quantity_1">Quantité :</label>
-            <input type="number" id="quantity_1" name="quantity_1" required>
+        <form method="POST" enctype="multipart/form-data" id="formPart2">
 
-            <label for="unit_1">Unité :</label>
-            <input type="text" id="unit_1" name="unit_1" required>
+            <div id="ingredients">
+                <div class="option_ingredient">
 
-        </div>
+                    <input class="ingredient" id="ingredient_1" name="ingredient_1" placeholder ="Saisissez un ingrédient" type="text" required>
+                    <br>
 
-        <button type="button" id="addIngredient">Ajouter un ingrédient</button>
+                    <div class="second_line">
+                        <input  class="quantity" id="quantity_1" name="quantity_1" placeholder ="Saisissez une quantité" type="number" required>
+                        <input  class="unit" id="unit_1" name="unit_1" placeholder ="Saisissez une unité" type="text" required>
+                    </div>
 
-        <div id="steps">
-            <label for="step_1">Etape 1 :</label>
-            <textarea id="description" name="step_1" rows="4" cols="30" required></textarea>
+                </div>
+            </div>  
 
-            <input accept="image/png, .jpg, .jpeg, image/gif" type="file" id="stepInputFile_1" class="stepInputFile" name="stepInputFile_1"><br/>
-            <img class="stepImage" id="step_1_image" src="/medias/website/common/no_img_placeholder.png" height="100 px" alt="Image">
+            <button id="addIngredient" class="submit" type="button">Ajouter un ingrédient</button> 
 
-        </div>
+
+            <div id="steps">
+                <div class="option_step">
+
+                    <textarea  class="step" id="description" name="step_1" placeholder ="Étape de la recette..." required></textarea>
+
+                    <label class="image_button2" for="stepInputFile_1">
+                        <img src="/medias/website/common/camera-outline.png" class="stepImage" id="step_1_image" alt="Image affichée">
+                        <input type="file" id="stepInputFile_1" class="stepInputFile" name="stepInputFile_1" accept="image/png, .jpg, .jpeg">
+                    </label>
+
+                </div>
+            </div> 
+
+            <button id="addStep" class="submit" type="button">Ajouter une étape de préparation</button> 
+
+
+
+            <div class="interractive_button2">
+                <a href=""><button type="previous">Étape précédente</button></a>
+                <a href=""><button type="submit">Étape suivante</button></a>
+            </div> 
+
+
+            <div class="lien_accueil">
+                <a href="/">Retour à l'accueil</a>
+            </div>
+
+            
+        </form>
         
-        <button type="button" id="addStep">Ajouter une étape</button><br/>
-
-
-        <button type="submit">Etape suivantes --></button>
-    </form>
-</div>
+    </div>
+</main>
