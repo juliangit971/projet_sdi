@@ -40,7 +40,7 @@ h2{
     font-size: 20px;
     margin-left: 3%;
     color: black;
-    
+    margin-top: 2vh;
 }
 
 .option:hover{
@@ -105,10 +105,14 @@ input[id="email"],input[id="password"],input[id="pseudo"] {
     margin-top: 5%;
 
 }
+
 .delete_account a{
     text-decoration: none;
     color: black;
     
+        
+  
+   
 }
 
 
