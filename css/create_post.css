@@ -226,12 +226,10 @@ label[class="image_button2"] img{
     cursor: pointer;
 }
 
-/*button[id="addIngredient"]{*/
-button[type="submit_ingredient"]{
+button[id="addIngredient"]{
     width: 230px;
 }
-/*button[id="addStep"]{*/
-button[type="submit_step"]{
+button[id="addStep"]{
     width: 340px;
     margin-bottom: 30px;
 }
