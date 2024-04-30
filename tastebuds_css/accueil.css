@@ -1,43 +1,66 @@
-
-.filters_section
-{
-    display: inline-block;
-    width: 300px;
-    margin-top: 10px;
-    vertical-align: top;
-    border: 2px solid;
-    border-color: black;
-    background-color: bisque;
-   
-}
-.filter
-{
-    margin: 6px;
-}
-.scrolable
-{
-    display : inline-block;
-    margin :30px;
-    margin-left: 130px;
-}
-.title_section {
+.scrolable{
     display: flex;
-    flex-direction: row; 
-}
-.share
-{
-    display : inline-block;
-    width:25px;
-}
-
-.paragraphe
-{
-    flex: 1;
-}
-.like
-{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .item{
+    background-color: #f9f2e1;
+    border-radius: 5%;
+    width: 50%;
+    justify-content: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    margin-top: 1%;
+    margin-left: 3%;
+  }
+  
+  .title h1 {
+    font-size: 3vh;
+  }
+  
+  .image_recette {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .image_recette img {
+    width: 100%;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+  }
+  
+  .row_under_image {
     display: flex;
     flex-direction: row;
-}
-
+    width: 100%;
+  }
+  
+  .row_left_side {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+  }
+  
+  .title {
+    margin-top: 0px;
+    flex-wrap: wrap;
+  }
+  
+  .like {
+    display: flex;
+    flex-direction: row;
+    margin-left: 4%;
+    margin-top: 3.5%;
+  }
+  
+  .like img {
+    height: 60%;
+  }
 
