@@ -63,6 +63,11 @@ $(function () {
 
                             $('#ingredients').append(`
 
+                                <div class="inline">
+                                    <h3>Ingrédient</h3>
+                                    <h3 id="num_ingredient">${ingredientSections}</h3>  
+                                </div>
+
                                 <div class="option_ingredient">
                                 
                                     <input class="ingredient" id="ingredient_${ingredientSections}" name="ingredient_${ingredientSections}" placeholder ="Saisissez un ingrédient" type="text" required>
@@ -83,6 +88,11 @@ $(function () {
                             stepSections++;
 
                             $('#steps').append(`
+
+                                <div class="inline">
+                                    <h3>Étape</h3>
+                                    <h3 id="num_step">${stepSections}</h3>  
+                                </div>
 
                                 <div class="option_step">
 
