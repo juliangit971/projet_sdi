@@ -57,42 +57,48 @@
         <h1>CRÉER UNE RECETTE</h1>
         <h2>INGRÉDIENTS ET ÉTAPES</h2>
         
-        <h3>Ingrédient</h3>  
-        <div class="option_ingredient">
-
-            <input  id="ingredient" name="ingredient" placeholder ="Saisissez un ingrédient" required>
-
-            <br>
-
-            <div class="second_line">
-                <input  id="quantity" name="quantity" placeholder ="Saisissez une quantité" required>
-
-                <input  id="unit" name="unit" placeholder ="Saisissez une unité" required>
+        <div class="ajout_ingredient">
+            <div class="inline">
+                <h3>Ingrédient</h3>
+                <h3 id="num_ingredient">[num_ingredient]</h3>  
             </div>
+            <div class="option_ingredient">
 
-        </div>  
+                <input  id="ingredient" name="ingredient" placeholder ="Saisissez un ingrédient" required>
+
+                <br>
+
+                <div class="second_line">
+                    <input  id="quantity" name="quantity" placeholder ="Saisissez une quantité" required>
+
+                    <input  id="unit" name="unit" placeholder ="Saisissez une unité" required>
+                </div>
+
+            </div>  
+        </div>
 
         <button class="submit" type="submit_ingredient">  Ajouter un ingrédient</button> 
 
+        <div class="ajout_step">
+            <div class="inline">
+                <h3>Étape</h3>
+                <h3 id="num_step">[num_step]</h3>  
+            </div>
+            <div class="option_step">
+                
+                <textarea  id="step" name="step" placeholder ="Étape de la recette..." required></textarea>
 
-        <h3>Étapes</h3>
-        <div class="option_step">
-            
-            <textarea  id="step" name="step" placeholder ="Étape de la recette..." required></textarea>
+                <label for="image_button2">
+                
+                    <img src="images/camera-outline.png" alt="Image affichée">
+                    <input type="file" id="image_button2" accept="image/png, image/jpeg">
+        
+                </label>
 
-            <label for="image_button2">
-            
-                <img src="images/camera-outline.png" alt="Image affichée">
-                <input type="file" id="image_button2" accept="image/png, image/jpeg">
-    
-            </label>
-
-        </div> 
+            </div> 
+        </div>
 
         <button class="submit" type="submit_step">  Ajouter une étape de préparation </button> 
-
-
-
 
         <div class="interractive_button2">
             

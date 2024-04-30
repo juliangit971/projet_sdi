@@ -246,6 +246,11 @@ button[type="submit_step"]{
     justify-content: center;
 }
 
+.inline{
+    display: flex;
+    flex-direction: row;
+}
+
 /*CREATION RECETTE 3*/
 
 select[id="time_prepa_h"],[id="time_prepa_min"],[id="time_cooking_min"],[id="time_cooking_h"],[id="time_prepa_min"],[id="time_rest_min"],[id="time_rest_h"]{
