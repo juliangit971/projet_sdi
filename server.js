@@ -72,6 +72,13 @@ app.get('/', expressUserUtils.checkUserBlocked, (req, res) => {
 
 
 
+/*** Test Route ***/
+
+app.get('/test-page', (req, res) => {
+    res.render('test_page.ejs');
+})
+
+
 /* Authentification */
 
 app.get('/login', expressUserUtils.checkNotAuthenticated, (req, res) => {
