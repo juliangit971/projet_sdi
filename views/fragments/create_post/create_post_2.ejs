@@ -1,66 +1,101 @@
 <!DOCTYPE html>
 
-<div id="recipePart3">
 
-    <h2>Ingrédients & Etapes</h2>
+<main>
 
-    <form method="POST" id="formPart3">
+    <div id="recipePart3" class="create">
 
-        <div id="cookingInfos">
-            <label for="preparationTime">Temps de préparation :</label>
-            <select id="preparationTime_h" name="preparationTime_h" required>
-                <option value="" hidden>------</option>
-                <% for (i = 0; i< 24; i++ ) { %>
-                    <option value= <%= i %> ><%= (i<10 ? `0${i}` : i)  %></option>
-                <% } %>
-            </select>heure(s)
-            <select id="preparationTime_m" name="preparationTime_m" required>
-                <option value="" hidden>------</option>
-                <% for (i = 0; i< 60; i++ ) { %>
-                    <option value= <%= i %> ><%= (i<10 ? `0${i}` : i)  %></option>
-                <% } %>
-            </select>minute(s)
-            <br/>
+        <h1>CRÉER UNE RECETTE</h1>
+        <h2>FINALISER LA RECETTE</h2>
 
-            <label for="cookingType">Type de cuisson :</label>
-            <input type="text" id="cookingType" name="cookingType">
-            <br/>
+        <form method="POST" id="formPart3">
 
-            <label for="cookingTime">Temps de cuisson :</label>
-            <select id="cookingTime_h" name="cookingTime_h">
-                <option value="" hidden>------</option>
-                <% for (i = 0; i< 24; i++ ) { %>
-                    <option value= <%= i %> ><%= (i<10 ? `0${i}` : i)  %></option>
-                <% } %>
-            </select>heure(s)
-            <select id="cookingTime_m" name="cookingTime_m">
-                <option value="" hidden>------</option>
-                <% for (i = 0; i< 60; i++ ) { %>
-                    <option value= <%= i %> ><%= (i<10 ? `0${i}` : i)  %></option>
-                <% } %>
-            </select>minute(s)
-            <br/>
 
-            <label for="restTime">Temps de repos :</label>
-            <select id="restTime_h" name="restTime_h">
-                <option value="">------</option>
-                <% for (i = 0; i< 24; i++ ) { %>
-                    <option value= <%= i %> ><%= (i<10 ? `0${i}` : i)  %></option>
-                <% } %>
-            </select>heure(s)
-            <select id="restTime_m" name="restTime_m">
-                <option value="">------</option>
-                <% for (i = 0; i< 60; i++ ) { %>
-                    <option value= <%= i %> ><%= (i<10 ? `0${i}` : i)  %></option>
-                <% } %>
-            </select>minute(s)
-            <br/>
+            <div class="option_time_prepa">
 
-            <label for="tags">Tags :</label>
-            <textarea id="tags" name="tags" rows="4" cols="10"></textarea>
+                <h3>Sélectionner un temps de préparation</h3>
+                <select name="preparationTime_h" id="time_prepa_h" required>
+                    <option value="" hidden>................</option>
+                    <% for (i = 0; i< 24; i++ ) { %>
+                        <option value= <%= i %> ><%= (i<10 ? `0${i}` : i)  %></option>
+                    <% } %>
+                </select>
+    
+                <span>heures</span>
+    
+                <select name="preparationTime_m" id="time_prepa_min" required>
+                    <option value="" hidden>................</option>
+                    <% for (i = 0; i< 60; i++ ) { %>
+                        <option value= <%= i %> ><%= (i<10 ? `0${i}` : i)  %></option>
+                    <% } %> 
+                </select>
+    
+                <span>minutes</span>
+            </div>
 
-        </div>
 
-        <button type="submit">Finaliser le post</button>
-    </form>
-</div>
+            <div class="option_type">
+                <h3>Sélectionner un type de cuisson</h3>
+                <input type="text" id="cookingType" name="cookingType">
+            </div>
+
+
+            <div class="option_time_cooking">
+                
+                <h3>Sélectionner un temps de cuisson</h3>
+                <select name="cookingTime_h" id="time_cooking_h">
+                    <option value="" hidden>................</option>
+                    <% for (i = 0; i< 24; i++ ) { %>
+                        <option value= <%= i %> ><%= (i<10 ? `0${i}` : i)  %></option>
+                    <% } %>
+                </select>
+    
+                <span>heures</span>
+    
+                <select name="cookingTime_m" id="time_cooking_min">
+                    <option value="" hidden>................</option>
+                    <% for (i = 0; i< 60; i++ ) { %>
+                        <option value= <%= i %> ><%= (i<10 ? `0${i}` : i)  %></option>
+                    <% } %> 
+                </select>
+    
+                <span>minutes</span>
+            </div>
+
+
+            <div class="option_time_rest">
+
+                <h3>Sélectionner un temps de repos</h3>
+                <select name="restTime_h" id="time_rest_h">
+                    <option value="" hidden>................</option>
+                    <% for (i = 0; i< 24; i++ ) { %>
+                        <option value= <%= i %> ><%= (i<10 ? `0${i}` : i)  %></option>
+                    <% } %>
+                </select>
+    
+                <span>heures</span>
+    
+                <select name="restTime_m" id="time_rest_min">
+                    <option value="" hidden>................</option>
+                    <% for (i = 0; i< 60; i++ ) { %>
+                        <option value= <%= i %> ><%= (i<10 ? `0${i}` : i)  %></option>
+                    <% } %>
+                </select>
+    
+                <span>minutes</span>
+            </div>
+
+
+            <textarea id="tags" name="tags" placeholder=" #Ajouter des tags "></textarea>
+
+
+            <div class="interractive_button2">
+                <a href=""><button type="previous">Étape précédente</button></a>
+                <a href=""><button type="submit">Valider la recette</button></a>
+            </div> 
+
+
+        </form>
+
+    </div>
+</main>

@@ -69,7 +69,7 @@ $(function () {
                                     <br>
                         
                                     <div class="second_line">
-                                        <input  class="quantity" id="quantity_${ingredientSections}" name="quantity_${ingredientSections}" placeholder ="Saisissez une quantité" type="number" required>
+                                        <input  class="quantity" id="quantity_${ingredientSections}" name="quantity_${ingredientSections}" placeholder ="Saisissez une quantité" type="number" min="1" required>
                                         <input  class="unit" id="unit_${ingredientSections}" name="unit_${ingredientSections}" placeholder ="Saisissez une unité" type="text" required>
                                     </div>
 

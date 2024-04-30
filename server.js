@@ -458,8 +458,11 @@ app.post('/api/create-post/part3', expressUserUtils.checkAuthenticatedAndNotBloc
             }
         }
         
-        dbDraftPosts[postID]["tags"] = tags;
-
+        if (tags != null) {
+            dbDraftPosts[postID]["tags"] = tags.map(tag => tag.slice(1));  // Permet d'enlever le "#" au début de chaque tags
+        } else {
+            dbDraftPosts[postID]["tags"] = null;
+        }
 
         // Déplacement des images
         const oldPath = dbNames.paths.draftPostImagesPath;
