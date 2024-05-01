@@ -1,0 +1,116 @@
+
+.parametre{
+    display: flex ;
+    flex-direction: row;
+    height: 100%;
+    background-color: #F9F2E1;
+
+}
+
+.selection{
+    width: 20%;
+    height: 100%;
+}
+.option
+{
+    display: flex ;
+    flex-direction: row;
+    padding: 5%;
+    
+}
+
+h2{
+
+    margin-left: 2%;
+    font-size: 44px;
+
+}
+.option img{
+    width: 40px;
+    height: 40px;
+    
+}
+
+.option[id="deconnexion"]{
+    padding-top: 30%;
+}
+.option a{
+
+    text-decoration: none; 
+    font-size: 20px;
+    margin-left: 3%;
+    color: black;
+    margin-top: 2vh;
+}
+
+
+.option:hover{
+    transform: scale(1.05);
+}
+
+
+
+.information
+{
+
+    padding-left: 5%;
+    background-color: white;
+    width: 60%;
+    height: 100%;
+
+}
+.information h1{
+    color: #ECB77F; 
+    font-size: 46px;
+}
+
+.profile_modif{
+    display: flex ;
+    flex-direction: row;
+}
+.profile_modif img{
+    cursor: pointer;
+}
+
+input[id="email"],input[id="password"],input[id="pseudo"] {
+    width: 420px;
+    padding: 15px;
+    border: 1px solid #000000;
+    border-radius: 12px;
+    font-size: 16px;
+    margin: auto;
+    font-weight: bold;
+}
+
+.enregister-btn{
+    margin-left:30%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    background-color: #F3BE85;
+    border-radius: 30px;
+    border: 0px;
+    width: 230px;
+    height: 55px;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.enregister-btn:hover{
+    transform: scale(1.05);
+}
+
+.delete_account{
+    margin-top: 5%;
+
+}
+.delete_account a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+
+
