@@ -297,8 +297,6 @@ app.get('/post/:postID', (req, res) => {
 
     const postID = req.params.postID;
 
-    console.log(user);
-
     try {
         return res.render('post_details.ejs', { post: dbPosts[postID], postID: postID, user: user });
     } catch (error) {
