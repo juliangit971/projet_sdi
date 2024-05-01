@@ -28,6 +28,7 @@ const userUtils = require('./src/utils/user_utils');
 // Misc.
 const eventLogger = require('./src/misc/event_logger');
 const fm = require('./src/utils/file_manager');
+const { constants } = require('fs/promises');
 
 
 
@@ -238,28 +239,71 @@ app.post('/forgot-password', expressUserUtils.checkNotAuthenticated, async (req,
 
 /** Layout **/
 
-app.get('/api/layout/:websiteElement', expressUserUtils.checkAuthenticatedAndNotBlocked, (req, res) => {
+app.get('/api/layout/:websiteElement', (req, res) => {
+
+    let username;
+    let logginStatus;
+
+    // Vérifier si l'utilisateur est connecté ou pas
+    try {
+        username = req.user.nickname;
+        logginStatus = true;
+    } catch (error) {
+        username = "Guest";
+        logginStatus = false;
+    }
 
     switch (req.params.websiteElement) {
-        case "header" :   // Envoyer la 1ère partie du formulaire
+        case "header":   // Envoyer la 1ère partie du formulaire
 
-            let username;
-            let logginStatus;
-
-            // Vérifier si l'utilisateur est connecté ou pas
-            try {
-                username = req.user.nickname;
-                logginStatus = true;
-            } catch (error) {
-                username = "Guest";
-                logginStatus = false;
-            }
+            
 
             res.render('fragments/layout/header.ejs', { logginStatus: logginStatus });
+            return;
+
+        case "home-feed":
+            const user = (logginStatus != false ? req.user : null)
+            res.render('fragments/home/home_feed.ejs', { posts: dbPosts, user: user });
+            return;
+
+        case "filters":
+            res.render('fragments/home/filters.ejs');
             return;
     }
 
     return res.status(404);
+})
+
+
+/** Post details **/
+
+app.get('/post/:postID', (req, res) => {
+
+    // Vérifier si l'utilisateur est connecté ou pas
+
+    let username;
+    let logginStatus;
+    let user;
+
+    try {
+        username = req.user.nickname;
+        logginStatus = true;
+        user = req.user
+    } catch (error) {
+        username = null;
+        logginStatus = false;
+        user = null;
+    }
+
+    const postID = req.params.postID;
+
+    console.log(user);
+
+    try {
+        return res.render('post_details.ejs', { post: dbPosts[postID], postID: postID, user: user });
+    } catch (error) {
+        return res.redirect('/error-404');
+    }
 })
 
 /** Create a post **/
@@ -516,6 +560,114 @@ app.post('/api/create-post/part3', expressUserUtils.checkAuthenticatedAndNotBloc
         return res.json({ error: "Unable to save post to DB!" });
     }
 });
+
+
+/** Post Interractions **/
+
+app.get('/api/post-interraction/:postID/:action', (req, res) => {
+
+    // Vérifier si l'utilisateur est connecté ou pas
+
+    let username;
+    let logginStatus;
+
+    try {
+        username = req.user.nickname;
+        logginStatus = true;
+    } catch (error) {
+        username = null;
+        logginStatus = false;
+        return res.json({ success: false, logginStatus: logginStatus, redirect: "/login" });
+    }
+
+    const userID = req.user.id;
+    const postID = req.params.postID;
+
+    switch (req.params.action) {
+
+        case "like":   // Liker le post
+            try {
+                dbUsers[userID].liked_posts.push(postID);
+                dbPosts[postID].likedBy.push(userID);
+
+                fm.saveJSON(dbUsers, dbNames.jsons.users);
+                fm.saveJSON(dbPosts, dbNames.jsons.posts);
+
+                res.json({ success: true, logginStatus: logginStatus });
+            } catch (error) {
+                eventLogger("SERVER", "ERROR !", `User "${req.user.id}" (${req.user.email}) couldn't like post "${postID}"`);
+                res.json({ success: false,  logginStatus: logginStatus});
+            }
+
+            return;
+
+        case "unlike":  // Unliker le post
+            try {
+
+                
+                dbUsers[userID].liked_posts.splice(postID, 1);
+
+                let likedBy = dbPosts[postID].likedBy;  // Faire "splice" directement 
+                likedBy = likedBy.splice(userID, 1);
+
+                dbPosts[postID].likedBy = likedBy;
+                
+                fm.saveJSON(dbPosts, dbNames.jsons.posts);
+                fm.saveJSON(dbUsers, dbNames.jsons.users);
+
+                res.json({ success: true, logginStatus: logginStatus });
+                
+            } catch (error) {
+                eventLogger("SERVER", "ERROR !", `User "${req.user.id}" (${req.user.email}) couldn't unlike post "${postID}"`);
+                res.json({ success: false,  logginStatus: logginStatus});
+            }
+
+            return;
+
+        
+        case "save":   // Save le post
+            try {
+                dbUsers[userID].saved_posts.push(postID);
+                dbPosts[postID].savedBy.push(userID);
+
+                fm.saveJSON(dbUsers, dbNames.jsons.users);
+                fm.saveJSON(dbPosts, dbNames.jsons.posts);
+
+                res.json({ success: true, logginStatus: logginStatus });
+
+            } catch (error) {
+                eventLogger("SERVER", "ERROR !", `User "${req.user.id}" (${req.user.email}) couldn't save post "${postID}"`);
+                res.json({ success: false,  logginStatus: logginStatus});
+            }
+
+            return;
+
+        case "unsave":  // Unsave le post
+            try {
+
+                
+                dbUsers[userID].saved_posts.splice(postID, 1);
+
+                let savedBy = dbPosts[postID].savedBy;  // Faire "splice" directement 
+                savedBy = savedBy.splice(userID, 1);
+
+                dbPosts[postID].savedBy = savedBy;
+                
+                fm.saveJSON(dbPosts, dbNames.jsons.posts);
+                fm.saveJSON(dbUsers, dbNames.jsons.users);
+
+                res.json({ success: true, logginStatus: logginStatus });
+
+            } catch (error) {
+                eventLogger("SERVER", "ERROR !", `User "${req.user.id}" (${req.user.email}) couldn't unsave post "${postID}"`);
+                res.json({ success: false,  logginStatus: logginStatus});
+            }
+
+            return;
+    }
+
+    return res.status(404);
+})
 
 
 

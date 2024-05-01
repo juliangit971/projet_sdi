@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        
+        <link href="/css/post_details.css" rel="stylesheet">
+        <link href="/css/header.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="/css/enregistrement.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rochester&display=swap" rel="stylesheet">
+
+        <script src="/jQuery/jquery-3.7.1.min.js"></script>
+        <script src="/jQuery/scripts/header_loader.js"></script>
+        <script src="/jQuery/scripts/post_interraction_manager.js"></script>
+        
+        <title>Tastebuds - <%= post.name %></title>
+
+    </head>
+
+
+    <body>
+
+        <header id="headerLoader"></header>
+
+        <main>
+
+            <% let isPostLiked = false
+            let isPostSaved = false
+            let likedStatus = "unclicked"
+            let savedStatus = "unclicked" %>
+            <%# // Vérifier si le post est liké ou pas %>
+            <% if (user) {
+                isPostLiked = (user.liked_posts.indexOf(postID) == -1 ? false : true);
+                isPostSaved = (user.saved_posts.indexOf(postID) == -1 ? false : true);
+
+                if (isPostLiked) {
+                    likedStatus = "clicked"
+                }
+
+                if (isPostSaved) {
+                    savedStatus = "clicked"
+                }
+            } %>
+
+            
+
+            <h1 for="fiche">Fiche de la recette</h1>
+                
+            
+            <div class="fiche">
+        
+                <div class="image_recette">
+                    <img id="image_recette" src="/medias/users/post_pictures/<%= post.presentationImage %>" alt="Image">
+                </div>
+        
+                <div class="row_under_image">
+
+                    <div class="row_left_side">
+                        <div class="title">
+                            <h1 id="name"><%= post.name %></h1>
+                        
+                        </div>
+        
+                        <div class="like">
+                            <% let likedImagePath = (isPostLiked ? "/medias/website/common/liked.png" : "/medias/website/common/like.png") %>
+                            <img src="<%= likedImagePath %>" class="like_button" id="<%= postID %>_like_button_<%= likedStatus %>">
+                            <span id="<%= postID %>_like_count"><%= post.likedBy.length %></span>
+                        </div>
+                    </div>
+
+                    <div class="share">
+                        <% let savedImagePath = (isPostSaved ? "/medias/website/common/saved.png" : "/medias/website/common/save.png") %>
+                        <img src="<%= savedImagePath %>" class="save_button" id="<%= postID %>_save_button_<%= savedStatus %>">
+                    </div>
+                    
+
+                </div>
+        
+                <div class="information_generale" >
+        
+                    <div class = "infos_colonne">
+        
+                        <div class="infos1">
+                            
+                            <div class="ligne">
+                                <h3>Temps de préparation:</h3>
+                                <% if (post.preparationTime == "0,0") { %>
+                                    <span>Aucun</span>
+                                <% } else { %>
+                                    <span><%= post.preparationTime.split(',')[0] %> h <%= post.preparationTime.split(',')[1] %></span>
+                                <% } %>
+                            </div>
+            
+
+                            <div class="ligne">
+                                <h3>Type de cuisson:</h3>
+                                <% if (post.cookingType == "") { %>
+                                    <span>Aucun</span>
+                                <% } else { %>
+                                    <span id="type_cooking"><%= post.cookingType %></span>
+                                <% } %>
+                                
+                            </div>
+            
+            
+                            <div class="ligne">
+                                <h3>Temps de cuisson:</h3>
+                                <% if (post.cookingTime == "0,0") { %>
+                                    <span>Aucun</span>
+                                <% } else { %>
+                                    <span><%= post.cookingTime.split(',')[0] %> h <%= post.cookingTime.split(',')[1] %></span>
+                                <% } %>
+                            </div>
+            
+
+                            <div class="ligne">
+                                <h3>Temps de repos:</h3>
+                                <% if (post.restTime == "0,0") { %>
+                                    <span>Aucun</span>
+                                <% } else { %>
+                                    <span><%= post.restTime.split(',')[0] %> h <%= post.restTime.split(',')[1] %></span>
+                                <% } %>
+                            </div>
+                        
+                        </div>
+        
+                        <div class="infos2">   
+
+                            <div class="ligne">
+                                <h3>Catégorie:</h3>
+                                <span id="category"><%= post.category %></span>
+                            </div>
+            
+                            <div class="ligne">
+                                <h3>Difficulté:</h3>
+                                <span id="difficulty"><%= post.difficulty %></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="description">
+                        <h3>Description</h3>
+                        <p id="description"><%= (post.description == "" ? "Aucune" : post.description) %></p>
+                    </div>
+        
+                    <h3 for="liste_ingredients">Liste d'ingrédients:</h3>
+                    <ol for="ingredients">
+
+                        <% post.ingredientSections.forEach((ingredient, i) => { %>
+                            
+                            <div id="ingredient" class="ligne_ingredient">
+                                <li class="ingredient"><%= ingredient.ingredient %> : <%= ingredient.quantity %> <%= ingredient.unit %></li> 
+                            </div>
+
+                        <% }); %>
+
+                    </ol>
+                            
+                </div>
+        
+                <div class="preparation">
+                    <h3>Préparation</h3> 
+            
+                    <ol for="step">
+
+                        <% post.stepSections.forEach((step, i) => { %>
+                            <div class="ligne_step">
+
+                                <li id="step"><%= step.description %></li>
+
+                                <% if (step.image) { %>
+                                    <div class="etape_image">
+                                        <img src="/medias/users/post_pictures/<%= step.image %>" alt="Image" width="300">
+                                    </div>
+                                <% } %>
+
+                            </div>
+
+                        <% }); %>
+
+                    </ol>
+                </div>
+        
+            </div>
+
+        </main>
+        
+    </body>
+</html>
