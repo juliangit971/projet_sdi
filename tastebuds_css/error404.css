@@ -1,0 +1,21 @@
+
+
+.text{
+    justify-content: center;
+    margin-left: 40%
+}
+h1,p{
+
+    font-size: 30px;
+}
+img{
+    height: 40%;
+    width: 40%;
+    justify-content: center;
+    margin-left: 26%;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

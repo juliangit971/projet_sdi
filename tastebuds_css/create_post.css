@@ -1,0 +1,295 @@
+body{
+    background-color: #F9F2E1;
+    font-family: 'Roboto' sans-serif;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.create{
+    width: 800px;
+    height: 100%;
+    padding-bottom: 30px;
+    background-color: white;
+    border:none;
+}
+
+h1,h2{
+    margin-left:15px;
+    color: #ECB77F;  
+}
+
+h1{
+    font-size: 46px;
+}
+
+h2{
+    
+    font-size: 34px;
+}
+
+
+h3{
+    font-size: 18px;
+    margin-left:15px;
+    padding: 0px;
+    font-weight:bold;
+}
+
+.option{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+select[id="difficulty"],[id="category"]{
+    width: 325px;
+    padding:10px;
+    margin-left: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+input[type="text"]{
+    margin-left:15px;
+    margin-bottom: 15px;
+    width: 400px;
+    color: black;
+    font-size: 16px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+input[type="name"]:focus{
+    outline: none; 
+}
+
+h3[for="description"]{
+    margin-top: 30px;
+}
+
+textarea[id="description"]{
+    width: 555px;
+    height: 200px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    padding: 10px;
+    color: black;
+    font-size: 16px;
+    border: black solid 1px;
+    border-radius: 15px;
+    font-family: sans-serif;
+    resize:none;
+}
+
+::placeholder{
+    color: black;
+    text-align: start;
+    font-family: 'Roboto' sans-serif;
+}
+
+.interractive_button1{
+    width: 800px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+input[type="file"]{
+    display: none;
+}
+
+label[for="inputFile"] img{
+    height: 80px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #F9F2E1;
+    border-radius: 15px;
+    border: black dashed 1px;
+    margin-left: 35px;
+    margin-top: 10px;
+}
+
+button[type="submit"],[type="previous"]{
+    margin-top: 30px;
+    background-color: #F3BE85;
+    border-radius: 30px;
+    border: 0px;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.lien_accueil{
+    margin-top: 30px;
+    margin-left: 30px;
+    background-color: white;
+    margin-bottom: 15px;
+}
+
+a[href="/"]{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding:15px;
+}
+
+/*RECETTE 2*/
+
+input[class="ingredient"],[class="quantity"],[class="unit"]{  
+    margin-left:15px;
+    margin-bottom: 10px;
+    width: 170px;
+    color: black;
+    font-size: 16px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+input[class="ingredient"]{
+    margin-top: 13px;
+}
+
+input[class="unit"]{
+    margin-left: 30px;
+}
+
+input[class="ingredient"],[class="quantity"],[class="unit"]:focus{
+    outline:none;
+}
+
+.second_line{
+    display: flex;
+    flex-direction: row;
+}
+
+.option_ingredient{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    border: black solid 1px;
+    border-radius: 15px;
+    width: 415px;
+    height: 100px;
+}
+
+textarea[class="step"]{
+    width: 580px;
+    height: 80px;
+    margin-left: 15px;
+    padding: 10px;
+    color: black;
+    font-size: 16px;
+    border: black solid 1px;
+    border-radius: 15px;
+    font-family: sans-serif;
+    resize: none;
+}
+
+.option_step{
+    display: flex;
+    flex-direction: row;
+}
+
+label[class="image_button2"] img{
+    height: 75px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #F9F2E1;
+    border-radius: 15px;
+    border: black dashed 1px;
+    margin-left: 35px;
+    margin-top: 15px;
+}
+
+.submit{
+    margin-top: 15px;
+    margin-left: 15px;
+    background-color: #F3BE85;
+    border-radius: 30px;
+    border: 0px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button[id="addIngredient"]{
+    width: 230px;
+}
+button[id="addStep"]{
+    width: 340px;
+    margin-bottom: 30px;
+}
+
+.interractive_button2{
+    margin-top: 40px;
+    width: 800px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    flex: content;
+    gap:100px;  
+    justify-content: center;
+}
+
+.inline{
+    display: flex;
+    flex-direction: row;
+}
+
+/*CREATION RECETTE 3*/
+
+select[id="time_prepa_h"],[id="time_prepa_min"],[id="time_cooking_min"],[id="time_cooking_h"],[id="time_prepa_min"],[id="time_rest_min"],[id="time_rest_h"]{
+    width: 100px;
+    padding:5px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    margin-top: -10px;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+select[id="type_cooking"]{
+    width: 250px;
+    padding:5px;
+    margin-left: 15px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+textarea[id="tags"]{
+    width: 320px;
+    height: 70px;
+    margin-left: 15px;
+    padding: 10px;
+    color: black;
+    font-size: 16px;
+    border: black solid 1px;
+    border-radius: 15px;
+    font-family: sans-serif;
+    resize: none;
+}
+
+.option_time_prepa{
+    margin-top: 50px;
+}
+
+
+
+
+

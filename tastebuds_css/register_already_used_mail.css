@@ -15,11 +15,11 @@ body{
     align-items: center;
 }
 
-.left_side {
+.right_side {
     background-color: white;
     height: 720px;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
     display: flex;
     flex-direction: column;
     width: 600px;
@@ -30,6 +30,7 @@ h1{
     margin-left: 50px;
     margin-top: 90px;
     font-size: 45px;
+    margin-bottom: 0px;
 }
 
 .interactive_button {
@@ -37,31 +38,36 @@ h1{
     flex-direction: column;   
 }
 
-label{
+label[for="email"],label[for="pseudo"] {
     margin-left: 90px;
+    margin-top: 30px;
     margin-bottom: 10px;
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
 }
 
-label[for="email"],label[for="password"]{
-    margin-top: 30px;   
+label[for="password"]{
+    margin-left: 90px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
 }
 
 input{
     width: 420px;
-    padding: 15px;  
+    padding: 15px;   
     border-radius: 12px;
     font-size: 16px;
     margin: auto;
     font-weight: bold;
 }
 
-input[type="email"] {
-    border: 1px solid black;
+input[type="password"],input[type="pseudo"] {
+    border: 1px solid #000000;
 }
 
-input[type="password"]{
+input[type="email"]{
     border: 1px solid red;
 }
 
@@ -74,9 +80,9 @@ p{
 }
 
 .opt {
-    font-size: 1em;
+    font-size: 18px;
     font-family: 'Roboto', sans-serif;
-    margin-left: 118px;
+    margin-left: 180px;
     margin-top: -10px;
 }
 
@@ -85,19 +91,15 @@ a {
     text-decoration: none; 
 }
 
-a[href="/register"]{
-    margin-left: 190px;
-}
-
 a[href="/"]{
     font-size: 22px;
     margin-left: 160px;
 }
 
-.login-btn {
+.sign-btn {
     margin-left:180px;
-    margin-top: 40px;
-    margin-bottom: 10px;
+    margin-top: 25px;
+    margin-bottom: 5px;
     background-color: #F3BE85;
     border-radius: 30px;
     border: 0px;
@@ -108,7 +110,7 @@ a[href="/"]{
     font-weight: bolder;
 }
 
-.login-btn:hover{
+.sign-btn:hover{
     transform: scale(1.05);
 }
 
@@ -116,13 +118,13 @@ button[type="submit"]{
     font-size: 24px;
 }
 
-.right_side {
+.left_side {
     background-image: url("/medias/website/common/fond_connexion.jpg");
     background-size: cover;
     height: 720px;
     width: 600px;;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
